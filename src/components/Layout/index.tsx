@@ -1,25 +1,23 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import Navbar from "./navbar";
-import useQuery from "../../hooks/useQuery";
+import { Toaster } from "react-hot-toast";
+import useNotAuthorized from "../../hooks/useNotAuthorized";
 
 type Props = {
   children: ReactNode;
 };
 
 export default function Layout({ children }: Props) {
-  const query = useQuery();
-  const error = query.get("error");
-
-  useEffect(() => {
-    if (error === "NotMCMember") {
-      alert("You must be a member of the Micro Club to register.");
-    }
-  }, [error]);
+  const error = useNotAuthorized();
+  console.log(error);
 
   return (
-    <div>
-      <Navbar />
-      {children}
-    </div>
+    <>
+      <Toaster />
+      <div>
+        <Navbar />
+        {children}
+      </div>
+    </>
   );
 }

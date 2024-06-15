@@ -1,4 +1,4 @@
-import HollowButton from "../Buttons/HollowButton";
+import HollowButton from "../UI/HollowButton";
 
 export default function Navbar() {
   return (
