@@ -12,6 +12,7 @@ export default {
         'dark': 'var(--bg)',
         'textColor': 'var(--color)',
         'customBlue': 'var(--blue)',
+        'border': 'var(--border)',
       },
       fontFamily: {
         font: ["Cinzel"]
