@@ -1,4 +1,4 @@
-import HollowButton from "../Buttons/HollowButton";
+import HollowButton from "../UI/HollowButton";
 
 export default function Navbar() {
   return (
@@ -18,7 +18,10 @@ export default function Navbar() {
           FaQ
         </a>
       </ul>
-      <HollowButton title="Register Now" />
+      <HollowButton
+        title="Register Now"
+        href="http://localhost:4000/auth/discord/"
+      />
     </div>
   );
 }
