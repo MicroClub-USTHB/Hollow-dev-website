@@ -1,6 +1,6 @@
 export default function App() {
   return (
-    <h1 className="text-3xl text-red-500 font-bold underline">
+    <h1 className="h-[100vh] bg-dark text-textColor ">
       Hollow world!
     </h1>
   )
