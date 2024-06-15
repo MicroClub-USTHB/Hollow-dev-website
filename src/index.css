@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    --bg: #00020E;
-    --color: #ffffff;
-    --blue: #4A6B85;
+  --bg: #00020e;
+  --color: #ffffff;
+  --blue: #4a6b85;
+}
+
+body {
+  /* LinearGradient background */
+  background: rgb(0, 3, 20);
+  background: -moz-linear-gradient(
+    309deg,
+    rgba(0, 3, 20, 1) 0%,
+    rgba(0, 1, 7, 1) 52%
+  );
+  background: -webkit-linear-gradient(
+    309deg,
+    rgba(0, 3, 20, 1) 0%,
+    rgba(0, 1, 7, 1) 52%
+  );
+  background: linear-gradient(
+    309deg,
+    rgba(0, 3, 20, 1) 0%,
+    rgba(0, 1, 7, 1) 52%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000314",endColorstr="#000107",GradientType=1);
 }
