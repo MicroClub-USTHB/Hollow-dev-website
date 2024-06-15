@@ -18,7 +18,10 @@ export default function Navbar() {
           FaQ
         </a>
       </ul>
-      <HollowButton title="Register Now" />
+      <HollowButton
+        title="Register Now"
+        href="http://localhost:4000/auth/discord/"
+      />
     </div>
   );
 }
