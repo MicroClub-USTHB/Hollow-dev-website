@@ -1,9 +1,9 @@
+import About from "../../components/About";
 
-
-const index = () => {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <About />
+    </div>
+  );
 }
-
-export default index
