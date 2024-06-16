@@ -10,6 +10,7 @@ export default {
       },
       fontFamily: {
         CinzelDecorative: ["Cinzel Decorative", "serif"],
+        font: ["Cinzel"],
       },
       backgroundImage: {
         registerBackground:
@@ -22,9 +23,6 @@ export default {
       boxShadow: {
         custom:
           "0px 0px 6.5px 0px var(--Color, #4D7292), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-      },
-      fontFamily: {
-        font: ["Cinzel"],
       },
       dropShadow: {
         custom1: "0 -1mm 4mm #5fd8ff",
