@@ -1,9 +1,15 @@
 import Itlogo from '../../assets/itlogo.svg'
-
+import Up from '../../assets/about-up.png'
+import Down from '../../assets/about-down.png'
 export default function About() {
   return (
     <div className="text-textColor font-font flex flex-col items-center gap-6 py-10 xl:px-32 md:px-28 px-10  bg-dark">
 
+      <div className=' flex items-center flex-col gap-2'>
+        <img src={Up} className=' w-80' />
+        <p className='text-xl'>About us</p>
+        <img src={Down} className=' w-64' />
+      </div>
 
       <div className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full">
 
@@ -14,7 +20,7 @@ export default function About() {
 
 
         <div className=' flex justify-end'>
-          <img src={Itlogo}  className=' w-64'/>
+          <img src={Itlogo}  className=' w-64 xl:pt-0 md:pt-0 sm:pt-0 pt-10'/>
         </div>
 
       </div>
