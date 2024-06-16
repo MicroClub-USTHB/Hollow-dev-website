@@ -2,12 +2,12 @@ import Itlogo from "../../assets/itLogo.svg";
 import Up from "../../assets/about-up.png";
 import Down from "../../assets/about-down.png";
 import VanillaTilt from "vanilla-tilt";
-
-import { useEffect } from "react";
+import { useEffect, useRef, MutableRefObject } from "react";
 
 export default function About() {
+  const cardRef = useRef<HTMLDivElement>() as MutableRefObject<HTMLDivElement>;
   useEffect(() => {
-    VanillaTilt.init(document.querySelector(".card") as HTMLElement, {
+    VanillaTilt.init(cardRef.current, {
       max: 5,
       speed: 500,
       reverse: true,
@@ -23,7 +23,10 @@ export default function About() {
         <img src={Down} className=" w-64" />
       </div>
 
-      <div className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full card">
+      <div
+        ref={cardRef}
+        className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full card"
+      >
         <div>
           <p className=" font-bold text-3xl pb-3">WHO ARE WE ?</p>
           <p className=" text-[14px] w-60 ">
@@ -38,7 +41,10 @@ export default function About() {
       </div>
 
       <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
-        <div className=" bg-dark  p-16 rounded-2xl border-border border card ">
+        <div
+          ref={cardRef}
+          className=" bg-dark  p-16 rounded-2xl border-border border card "
+        >
           <p className=" font-bold text-3xl pb-3">What is hollow dev ?</p>
           <p className="text-[14px]">
             Hollow Dev is an online hackathon focused on backend development and
@@ -47,7 +53,10 @@ export default function About() {
           </p>
         </div>
 
-        <div className=" bg-dark  p-16 rounded-2xl border-border border card">
+        <div
+          ref={cardRef}
+          className=" bg-dark  p-16 rounded-2xl border-border border card"
+        >
           <p className=" font-bold text-3xl pb-3">Our vision</p>
           <p className=" text-[14px] ">
             We aim to elevate the level of our members and turn them into strong
