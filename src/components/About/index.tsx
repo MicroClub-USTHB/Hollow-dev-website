@@ -1,8 +1,10 @@
-import Itlogo from "../../assets/itlogo.svg";
+import Itlogo from "../../assets/itLogo.svg";
 import Up from "../../assets/about-up.png";
 import Down from "../../assets/about-down.png";
 import VanillaTilt from "vanilla-tilt";
+
 import { useEffect } from "react";
+
 export default function About() {
   useEffect(() => {
     VanillaTilt.init(document.querySelector(".card") as HTMLElement, {
