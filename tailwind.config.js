@@ -1,9 +1,11 @@
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        circle: "#5fd8ff",
+      },
       fontFamily: {
         CinzelDecorative: ["Cinzel Decorative", "serif"],
       },
@@ -20,8 +22,40 @@ export default {
           "0px 0px 6.5px 0px var(--Color, #4D7292), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       },
       fontFamily: {
-        font: ["Cinzel"]
-      }
+        font: ["Cinzel"],
+      },
+      dropShadow: {
+        custom1: "0 -1mm 4mm #5fd8ff",
+        custom2: "0 -1mm 4mm #4d7292",
+      },
+      keyframes: {
+        floating: {
+          "0%": {
+            visibility: "visible",
+            transform: "translate(0, 40px)",
+          },
+          "50%": {
+            visibility: "visible",
+            transform: "translate(0, 5px)",
+          },
+          "100%": {
+            visibility: "visible",
+            transform: "translate(0, 40px)",
+          },
+        },
+        circle: {
+          from: {
+            width: "20px",
+            "background-color": "#4d7292",
+            filter: "drop-shadow-custom2",
+          },
+          to: {
+            width: "80px",
+            "background-color": "#5fd8ff",
+            filter: "drop-shadow-custom2",
+          },
+        },
+      },
     },
   },
   plugins: [],
