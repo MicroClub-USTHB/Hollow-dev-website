@@ -1,11 +1,16 @@
-import Loading from "../../components/UI/Loading";
-import { useState } from "react";
-const Registration = () => {
-  const [loading, setLoading] = useState(true);
-  setTimeout(() => {
-    setLoading(false);
-  }, 3000);
-  return <div>{loading ? <Loading /> : <div>Registration</div>}</div>;
+import Footer from "../../components/Registration/Footer";
+import Form from "../../components/Registration/Form";
+import Header from "../../components/Registration/Header";
+
+const index = () => {
+  document.title = "Hollow-Dev|Registration";
+  return (
+    <div className="w-screen h-screen items-center justify-evenly bg-registerBackground bg-bottom   bg-cover bg-repeat-y  flex flex-col py-4 md:py-10 ">
+      <Header />
+      <Form />
+      <Footer />
+    </div>
+  );
 };
 
 export default Registration;

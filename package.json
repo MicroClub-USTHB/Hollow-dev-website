@@ -14,6 +14,8 @@
     "framer-motion": "^11.2.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.0",
+    "react-router-dom": "^6.23.1"
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.1",
     "tailwind-merge": "^2.3.0",
