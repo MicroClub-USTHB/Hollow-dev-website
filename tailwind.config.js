@@ -5,6 +5,8 @@ export default {
     extend: {
       backgroundColor: {
         circle: "#5fd8ff",
+        "loading-bg-phone": "#040D1C",
+        "loading-bg-desktop": "#00020E",
       },
       fontFamily: {
         CinzelDecorative: ["Cinzel Decorative", "serif"],
