@@ -26,7 +26,7 @@ export default function About() {
       <div className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full card">
 
         <div>
-          <p className=' font-bold text-3xl pb-3'>WHO ARE WE?</p>
+          <p className=' font-bold text-3xl pb-3'>WHO ARE WE ?</p>
           <p className=' text-[14px] w-60 '>The IT Section, one of three key sections at Micro Club, The section offers activities like bootcamps and hackathons.</p>
         </div>
 
@@ -42,7 +42,7 @@ export default function About() {
 
         <div className=" bg-dark  p-16 rounded-2xl border-border border card ">
           
-          <p className=' font-bold text-3xl pb-3'>What is hollow dev?
+          <p className=' font-bold text-3xl pb-3'>What is hollow dev ?
           </p>
           <p className='text-[14px]'>Hollow Dev is an online hackathon focused on backend development and building server-side software, where each team will have to solve challenges.</p>
         </div>
