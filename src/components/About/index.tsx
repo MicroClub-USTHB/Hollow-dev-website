@@ -1,7 +1,19 @@
 import Itlogo from '../../assets/itlogo.svg'
 import Up from '../../assets/about-up.png'
 import Down from '../../assets/about-down.png'
+import VanillaTilt from 'vanilla-tilt'
+import { useEffect } from 'react'
 export default function About() {
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll(".card"),{
+      max: 5,
+      speed: 500,
+      glare: false,
+      reverse: true,
+      glare: true,
+      "max-glare": 0.1,
+    })
+  })
   return (
     <div className="text-textColor font-font flex flex-col items-center gap-6 py-10 xl:px-32 md:px-28 px-10  bg-dark">
 
@@ -11,7 +23,7 @@ export default function About() {
         <img src={Down} className=' w-64' />
       </div>
 
-      <div className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full">
+      <div className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full card">
 
         <div>
           <p className=' font-bold text-3xl pb-3'>WHO ARE WE?</p>
@@ -25,10 +37,10 @@ export default function About() {
 
       </div>
 
-      <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 ">
+      <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
 
 
-        <div className=" bg-dark  p-16 rounded-2xl border-border border  ">
+        <div className=" bg-dark  p-16 rounded-2xl border-border border card ">
           
           <p className=' font-bold text-3xl pb-3'>What is hollow dev?
           </p>
@@ -36,7 +48,7 @@ export default function About() {
         </div>
 
 
-        <div className=" bg-dark  p-16 rounded-2xl border-border border">
+        <div className=" bg-dark  p-16 rounded-2xl border-border border card">
           
           <p className=' font-bold text-3xl pb-3'>Our vision</p>
           <p className=' text-[14px] '>We aim to elevate the level of our members and turn them into strong back-end knights. Hollow Dev is designed to help you practice what you learned in the bootcamp. By solving challenges, We promise you that are building projects that will not only deepen your understanding of backend concepts but also make your Portfolio shine. So, grab your key-sword and start coding !</p>
