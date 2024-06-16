@@ -1,99 +1,161 @@
+import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { IFormInput } from "../../types/types";
 import emailIcon from "../../assets/registration/mail-24.svg";
 import userIcon from "../../assets/registration/person-24.svg";
 import drop from "../../assets/registration/Drop.svg";
-import "../../views/Registration/style.css"
-const Form = () => {
+import "../../views/Registration/style.css";
+import SubmitArrow from "../../assets/registration/SubmitArrow.svg";
+
+const Form: React.FC = () => {
+  // Initialize the useForm hook
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
+  // Define the submit handler
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+    reset();
+  };
+
   return (
     <>
-      <form className=" p-2 px-16 w-5/6 text-white space-y-4">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="p-2 md:px-16 w-5/6 text-white space-y-4"
+      >
         {/* full name + email div */}
-        <div className=" flex flex-row items-center justify-center  gap-6 ">
-          {/* -----full name ----- */}
-          <div className="relative w-1/2">
+        <div className="flex flex-col md:flex-row  items-center justify-center gap-6">
+          {/* Full Name */}
+          <div className="relative  w-full md:w-1/2">
             <input
               type="text"
               id="UserName"
               placeholder="Full Name"
-              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              {...register("fullName", { required: "Full Name is required" })}
             />
-
-            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400 ">
+            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400">
               <img src={userIcon} alt="" className="size-4" />
             </span>
+            {errors.fullName && (
+              <p className="text-red-500">{errors.fullName.message}</p>
+            )}
           </div>
-          {/* ---email----- */}
-          <div className="relative w-1/2">
+          {/* Email */}
+          <div className="relative  w-full md:w-1/2">
             <input
-              type="text"
+              type="email"
               id="UserEmail"
               placeholder="Your Email"
-              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email address",
+                },
+              })}
             />
-
-            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400 ">
+            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400">
               <img src={emailIcon} alt="" className="size-4" />
             </span>
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
           </div>
         </div>
-        {/* team name + mc section */}
-        <div className=" flex flex-row items-center justify-center  gap-6 ">
-          {/* ---- team name ------ */}
-          <div className="relative  w-1/2">
+        {/* Team Name + MC Section */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          {/* Team Name */}
+          <div className="relative w-full md:w-1/2">
             <input
               type="text"
-              id="UserEmail"
-              placeholder="Your Email"
-              className=" rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out w-full customText"
+              id="TeamName"
+              placeholder="Team Name"
+              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              {...register("teamName", { required: "Team Name is required" })}
             />
-
-            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400 ">
-              <img src={emailIcon} alt="" className="size-4" />
+            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400">
+              <img src={userIcon} alt="team icon" className="size-4" />
             </span>
+            {errors.teamName && (
+              <p className="text-red-500">{errors.teamName.message}</p>
+            )}
           </div>
-          {/* MC section */}
-          <div className="relative  w-1/2">
+          {/* MC Section */}
+          <div className="relative w-full md:w-1/2">
             <select
-              name="section"
               id="section"
-              className=" w-full  rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] appearance-none "
-              aria-placeholder="Your MC Section"
+              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] appearance-none"
+              {...register("mcSection", { required: "MC Section is required" })}
             >
-              <option value="MC">MC Section</option>
+              <option value="">MC Section</option>
               <option value="AI">AI</option>
               <option value="Web">Web</option>
               <option value="Game">Game</option>
               <option value="Design">Design</option>
             </select>
-            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400 ">
+            <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400">
               <img src={drop} alt="" className="size-4" />
             </span>
+            {errors.mcSection && (
+              <p className="text-red-500">{errors.mcSection.message}</p>
+            )}
           </div>
         </div>
-        {/* did you attend the workshop */}
-        <div className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out flex flex-row justify-between items-center radiotext">
-          <label htmlFor="" className="">Did you attend the workshop?</label>
-          <div>
-            <input type="radio" name="attended" id="attended" />
-            <label htmlFor="" >yes</label>
-            <input type="radio" name="attended" id="attended" className=" w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-teal-500 aprearance-none "/>
-            <label htmlFor="">no</label>
+        {/* Did you attend the workshop */}
+        <div className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out flex flex-row justify-between items-center radiotext">
+          <label htmlFor="">Did you attend the workshop?</label>
+          <div className="flex flex-row items-center justify-center gap-2">
+            <input
+              type="radio"
+              id="yes"
+              value="yes"
+              className="appearance-none size-5 checked:bg-white border-[1.5px] border-[#EBEBEB66]/60 rounded-full transition duration-500 ease-in-out"
+              {...register("attended", { required: "Attendance is required" })}
+            />
+            <label htmlFor="yes">Yes</label>
+            <input
+              type="radio"
+              id="no"
+              value="no"
+              className="appearance-none size-5 checked:bg-white border-[1.5px] border-[#EBEBEB66]/60 rounded-full transition duration-500 ease-in-out"
+              {...register("attended", { required: "Attendance is required" })}
+            />
+            <label htmlFor="no">No</label>
           </div>
-          
+          {errors.attended && (
+            <p className="text-red-500">{errors.attended.message}</p>
+          )}
         </div>
-        {/* motivation text area same styli as the input */}
+        {/* Motivation text area */}
         <textarea
-          name="motivation"
           id="motivation"
-          className="w-full min-h-20 max-h-32 rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-2   focus:outline-none focus:ring-2  focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+          className="w-full min-h-20 max-h-32 rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-2 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
           placeholder="What is your motivation for participating in this hackathon?"
+          {...register("motivation", { required: "Motivation is required" })}
         ></textarea>
-        {/* submit button same style asa the input */}
-        <div className=" flex justify-end">
-            <button className=" rounded-2xl border-1 border-customBorder  shadow-custom text-[#EBEBEB66]/900 px-4 py-2
-        hover:ring-2 hover:ring-[#EBEBEB66]/900 hover:bg-[#EBEBEB66]/900  transition duration-500 ease-in-out 
-        ">
-          Submit
-        </button>
+        {errors.motivation && (
+          <p className="text-red-500">{errors.motivation.message}</p>
+        )}
+        {/* Submit button */}
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            className="group rounded-2xl border-1 border-customBorder shadow-custom text-[#EBEBEB66]/900 px-4 py-2 hover:ring-2 hover:ring-[#EBEBEB66]/900 hover:bg-[#00020E]/60 transition duration-500 ease-in-out flex flex-row gap-2 justify-center items-center text-[#EBEBEB66]/60 text-[20px]"
+          >
+            Submit
+            <img
+              src={SubmitArrow}
+              alt=""
+              className="group-hover:animate-pulse"
+            />
+          </button>
         </div>
       </form>
     </>
