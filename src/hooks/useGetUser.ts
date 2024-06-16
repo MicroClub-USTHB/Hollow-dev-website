@@ -5,10 +5,9 @@ import { useUser } from "./useUser.ts";
 
 type UseGetUserResult = [UserI | null, boolean];
 
-
 export default function useGetUser(): UseGetUserResult {
   const [waiting, setWaiting] = useState<boolean>(true);
-  const {user,setUser} = useUser()
+  const { user, setUser } = useUser();
 
   useEffect(() => {
     async function getData() {
@@ -19,14 +18,14 @@ export default function useGetUser(): UseGetUserResult {
           credentials: "include",
         });
         const data = await response.json();
+        console.log(data);
         if (data.data) {
           // If user not On MC server then clear Cookies and Session From DB
-          if(data.data.status == 'failed') {
-            await clearSession(data.data)
-            setUser(null)
-          }else setUser(data.data);
+          if (data.data.status == "failed") {
+            await clearSession(data.data);
+            setUser(null);
+          } else setUser(data.data);
         }
-        
       } catch (error) {
         console.log(error);
       }
