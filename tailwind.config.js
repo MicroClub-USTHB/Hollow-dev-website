@@ -12,6 +12,10 @@ export default {
           "url('/src/assets/registration/Registrationbg.svg')",
       },
       colors: {
+        'dark': 'var(--bg)',
+        'textColor': 'var(--color)',
+        'customBlue': 'var(--blue)',
+        'border': 'var(--border)',
         customBorder: "var (#4A6B85)",
         customShadow: "var (#4D7292)",
       },
