@@ -1,16 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./views/Home/index";
-import Registration from "./views/Registration/index";
+import Registration from "./views/Registration";
 import Layout from "./components/Layout";
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Layout>
-        <Home />
-      </Layout>
-    ),
+    element: <Home />,
     errorElement: <div>404 Not Found</div>,
   },
   {
@@ -20,7 +15,7 @@ const router = createBrowserRouter([
         <Registration />
       </Layout>
     ),
-  }
+  },
 ]);
 
 export default router;

@@ -1,16 +1,24 @@
+import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
+import Footer from "../../components/Registration/Footer";
+import Header from "../../components/Registration/Header";
+import Form from "../../components/Registration/Form";
+export default function Registration() {
+  useEffect(() => {
+    document.title = "Hollow-Dev | Registration";
+  }, []);
 
-// change name to Index with I capital
-const Index = () => { 
-    const {user} = useUser()
-    
-    if(!user || user.isRegistred || user.status == 'failed') return <Navigate to={'/'}/>
+  const { user } = useUser();
 
-    return (
-      <div>Registration</div>
-    )
-  }
- 
+  if (!user || user.isRegistred || user.status == "failed")
+    return <Navigate to={"/"} />;
 
-export default Index
+  return (
+    <div className="w-screen h-screen items-center justify-evenly bg-registerBackground bg-bottom   bg-cover bg-repeat-y  flex flex-col py-4 md:py-10 ">
+      <Header />
+      <Form />
+      <Footer />
+    </div>
+  );
+}
