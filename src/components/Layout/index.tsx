@@ -14,13 +14,13 @@ export default function Layout({ children }: Props) {
   const [user,waiting] = useGetUser();
 
 
-  // Waiting the whole page or just navBar!!
+  // Waiting data to render the whole page
  if(!waiting){
   return (
     <>
       <Toaster />
       <div>
-        <Navbar waiting={waiting} user={user}/>
+        <Navbar user={user}/>
         {children}
       </div>
     </>

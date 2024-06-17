@@ -1,9 +1,8 @@
 import HollowButton from "../UI/HollowButton";
 import { UserI } from "../../types/types";
 
-export default function Navbar({waiting,user}:{waiting:boolean,user:UserI | null}) {
+export default function Navbar({user}:{user:UserI | null}) {
 
-  if(!waiting){
     return (
       <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
         <a href="/"><h1>HOLLOW DEV</h1></a>
@@ -27,5 +26,5 @@ export default function Navbar({waiting,user}:{waiting:boolean,user:UserI | null
         />
       </div>
     );
-  }
+  
 }
