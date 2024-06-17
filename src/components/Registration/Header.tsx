@@ -1,4 +1,4 @@
-import itLogo from "../../assets/itLogo.svg";
+import itLogo from "../../assets/itlogo.svg";
 import pattern from "../../assets/registration/pattern.svg";
 const Header = () => {
   return (
