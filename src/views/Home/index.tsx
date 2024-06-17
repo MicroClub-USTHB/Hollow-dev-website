@@ -1,9 +1,9 @@
-import FaqItem from "../../components/FAQ/FaqItem.tsx";
+import Faq from "../../components/FAQ/index.tsx";
 
 export default function Home() {
   return (
     <div>
-      <FaqItem/>
+      <Faq/>
     </div>
   );
 }
