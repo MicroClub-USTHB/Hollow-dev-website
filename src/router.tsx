@@ -5,7 +5,11 @@ import Layout from "./components/Layout";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Layout>
+        <Home />
+      </Layout>
+    ),
     errorElement: <div>404 Not Found</div>,
   },
   {
