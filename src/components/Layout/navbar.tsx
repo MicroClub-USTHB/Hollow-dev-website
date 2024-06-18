@@ -6,7 +6,7 @@ export default function Navbar({ user }: { user: UserI | null }) {
   const location = useLocation();
 
   return (
-    <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
+    <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl w-full absolute top-0 left-0 z-10">
       <a href="/">
         <h1>HOLLOW DEV</h1>
       </a>
