@@ -3,7 +3,7 @@ import { UserI } from "../../types/types";
 
 export default function Navbar({ user }: { user: UserI | null }) {
   return (
-    <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
+    <div className="bg-transparent text-white flex items-center justify-between text-xl max-w-7xl mx-auto px-8 h-20">
       <a href="/">
         <h1>HOLLOW DEV</h1>
       </a>
