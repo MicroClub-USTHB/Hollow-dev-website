@@ -1,32 +1,29 @@
 import itlogo from "../../assets/itlogo.svg";
 import Up from "../../assets/about-up.png";
 import Down from "../../assets/about-down.png";
-import VanillaTilt from "vanilla-tilt";
-import { useEffect, useRef, MutableRefObject } from "react";
+import { TiltOptions } from "vanilla-tilt";
+import Tilt from "./Tilt";
 
 export default function About() {
-  const cardRef = useRef<HTMLDivElement>() as MutableRefObject<HTMLDivElement>;
-  useEffect(() => {
-    VanillaTilt.init(cardRef.current, {
-      max: 5,
-      speed: 500,
-      reverse: true,
-      glare: true,
-      "max-glare": 0.1,
-    });
-  });
-  // py-10 xl:px-32 md:px-28 px-10  bg-dark
+  const tiltOptions: TiltOptions = {
+    max: 5,
+    speed: 500,
+    reverse: true,
+    glare: true,
+    scale: 1.03,
+    "max-glare": 0.1,
+  };
   return (
-    <div className="text-textColor font-font flex flex-col items-center gap-6 border">
+    <div className="text-textColor font-font flex flex-col items-center gap-6">
       <div className=" flex items-center flex-col gap-2">
         <img src={Up} className=" w-80" />
         <p className="text-xl">About us</p>
         <img src={Down} className=" w-64" />
       </div>
 
-      <div
-        ref={cardRef}
-        className="bg-[#07080D] p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
+      <Tilt
+        options={tiltOptions}
+        className="bg-[#07080D] cursor-pointer p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
       >
         <div>
           <p className=" font-bold text-3xl pb-3">WHO ARE WE ?</p>
@@ -39,12 +36,11 @@ export default function About() {
         <div className=" flex justify-end">
           <img src={itlogo} className=" w-64 xl:pt-0 md:pt-0 sm:pt-0 pt-10" />
         </div>
-      </div>
-
-      <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
-        <div
-          ref={cardRef}
-          className="bg-[#07080D] p-16 rounded-2xl border-[#3D3D3D] border card "
+      </Tilt>
+      <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
+        <Tilt
+          options={tiltOptions}
+          className="bg-[#07080D] cursor-pointer p-16 rounded-2xl border-[#3D3D3D] border card "
         >
           <p className=" font-bold text-3xl pb-3">What is hollow dev ?</p>
           <p className="text-[14px]">
@@ -52,11 +48,11 @@ export default function About() {
             building server-side software, where each team will have to solve
             challenges.
           </p>
-        </div>
+        </Tilt>
 
-        <div
-          ref={cardRef}
-          className="bg-[#07080D] p-16 rounded-2xl border-[#3D3D3D] border card"
+        <Tilt
+          options={tiltOptions}
+          className="bg-[#07080D] cursor-pointer p-16 rounded-2xl border-[#3D3D3D] border card"
         >
           <p className=" font-bold text-3xl pb-3">Our vision</p>
           <p className=" text-[14px] ">
@@ -67,7 +63,7 @@ export default function About() {
             understanding of backend concepts but also make your Portfolio
             shine. So, grab your key-sword and start coding !
           </p>
-        </div>
+        </Tilt>
       </div>
     </div>
   );

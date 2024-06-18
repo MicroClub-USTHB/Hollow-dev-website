@@ -20,7 +20,7 @@ export default function Layout({ children }: Props) {
         <Toaster />
         <div>
           <Navbar waiting={waiting} user={user} />
-          <div className="border border-red-600 pb-64 pt-32 max-w-7xl mx-auto px-8 space-y-28">
+          <div className="pb-64 pt-32 max-w-7xl mx-auto px-8 space-y-28">
             {children}
           </div>
         </div>
