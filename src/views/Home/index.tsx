@@ -4,7 +4,6 @@ import Loading from "../../components/UI/Loading";
 import Layout from "../../components/Layout";
 import Faq from "../../components/FAQ";
 import Hero from "../../components/Hero";
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
   setTimeout(() => {
