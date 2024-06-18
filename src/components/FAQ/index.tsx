@@ -37,8 +37,8 @@ function Faq() {
   ];
 
   return (
-    <div className="relative h-full w-full space-y-20">
-      <div className="flex items-center flex-col gap-2">
+    <div className="relative h-full w-full">
+      <div className="flex items-center flex-col gap-2 mb-16">
         <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Frequently Asked Questions</h1>
         <img src={Down} className="w-64" />

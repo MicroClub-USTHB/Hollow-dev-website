@@ -14,9 +14,9 @@ export default function About() {
     "max-glare": 0.1,
   };
   return (
-    <div className="text-textColor font-font flex flex-col items-center gap-6">
+    <div className="text-textColor font-font flex flex-col items-center gap-8">
       <div className=" flex items-center flex-col gap-2">
-        <img src={Up} className=" w-80" />
+        <img src={Up} className="w-80" />
         <p className="text-xl">About us</p>
         <img src={Down} className=" w-64" />
       </div>
