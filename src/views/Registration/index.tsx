@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
-import Footer from "../../components/Registration/Footer";
 import Header from "../../components/Registration/Header";
 import Form from "../../components/Registration/Form";
 export default function Registration() {
@@ -15,10 +14,9 @@ export default function Registration() {
     return <Navigate to={"/"} />;
 
   return (
-    <div className="w-screen h-screen items-center justify-evenly bg-registerBackground bg-bottom   bg-cover bg-repeat-y  flex flex-col py-4 md:py-10 ">
+    <div className=" min-w-screen min-h-screen items-center justify-evenly bg-registerBackground bg-bottom bg-cover bg-no-repeat  flex flex-col pb-10 pt-20 md:py-10 ">
       <Header />
       <Form />
-      <Footer />
     </div>
   );
 }
