@@ -26,7 +26,7 @@ export default function About() {
 
       <div
         ref={cardRef}
-        className=" bg-dark p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-border border  w-full card"
+        className="bg-[#07080D] p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
       >
         <div>
           <p className=" font-bold text-3xl pb-3">WHO ARE WE ?</p>
@@ -44,7 +44,7 @@ export default function About() {
       <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
         <div
           ref={cardRef}
-          className=" bg-dark  p-16 rounded-2xl border-border border card "
+          className="bg-[#07080D] p-16 rounded-2xl border-[#3D3D3D] border card "
         >
           <p className=" font-bold text-3xl pb-3">What is hollow dev ?</p>
           <p className="text-[14px]">
@@ -56,7 +56,7 @@ export default function About() {
 
         <div
           ref={cardRef}
-          className=" bg-dark  p-16 rounded-2xl border-border border card"
+          className="bg-[#07080D] p-16 rounded-2xl border-[#3D3D3D] border card"
         >
           <p className=" font-bold text-3xl pb-3">Our vision</p>
           <p className=" text-[14px] ">
