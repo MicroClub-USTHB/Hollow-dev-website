@@ -44,7 +44,7 @@ function Faq() {
         <img src={Down} className="w-64" />
       </div>
       <div className="flex justify-center align-center">
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-20">
           {cardsText.map((card) => (
             <FaqItem frontText={card.frontText} backText={card.backText} />
           ))}
