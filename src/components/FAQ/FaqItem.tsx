@@ -1,4 +1,4 @@
-import ItLogo from "../../assets/itlogo.svg";
+import itlogo from "../../assets/itlogo.svg";
 import Borders from "../../assets/borders.png";
 
 type Props = {
@@ -18,7 +18,7 @@ function FaqItem(props: Props) {
           />
         </div>
         <div className="absolute flex flex-col items-center backface-hidden w-full h-full space-y-9">
-          <img src={ItLogo} className="w-12 h-12 mt-5" />
+          <img src={itlogo} className="w-12 h-12 mt-5" />
 
           <div className="border border-white rounded-lg p-8 m-8 bg-[#0D0E13]">
             <p className="text-xs text-white text-center">{props.frontText}</p>

@@ -37,11 +37,11 @@ function Faq() {
   ];
 
   return (
-    <div className="relative h-full w-full m-10 space-y-20">
+    <div className="relative h-full w-full space-y-20 border">
       <div className="flex items-center flex-col gap-2">
-        <img src={Up} className=" w-80" />
+        <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Frequently Asked Questions</h1>
-        <img src={Down} className=" w-64" />
+        <img src={Down} className="w-64" />
       </div>
       <div className="flex justify-center align-center">
         <div className="grid grid-cols-3 gap-20">

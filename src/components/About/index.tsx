@@ -1,4 +1,4 @@
-import Itlogo from "../../assets/itLogo.svg";
+import itlogo from "../../assets/itlogo.svg";
 import Up from "../../assets/about-up.png";
 import Down from "../../assets/about-down.png";
 import VanillaTilt from "vanilla-tilt";
@@ -15,8 +15,9 @@ export default function About() {
       "max-glare": 0.1,
     });
   });
+  // py-10 xl:px-32 md:px-28 px-10  bg-dark
   return (
-    <div className="text-textColor font-font flex flex-col items-center gap-6 py-10 xl:px-32 md:px-28 px-10  bg-dark">
+    <div className="text-textColor font-font flex flex-col items-center gap-6 border">
       <div className=" flex items-center flex-col gap-2">
         <img src={Up} className=" w-80" />
         <p className="text-xl">About us</p>
@@ -36,7 +37,7 @@ export default function About() {
         </div>
 
         <div className=" flex justify-end">
-          <img src={Itlogo} className=" w-64 xl:pt-0 md:pt-0 sm:pt-0 pt-10" />
+          <img src={itlogo} className=" w-64 xl:pt-0 md:pt-0 sm:pt-0 pt-10" />
         </div>
       </div>
 

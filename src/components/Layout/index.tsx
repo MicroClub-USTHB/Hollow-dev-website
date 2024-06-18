@@ -11,19 +11,20 @@ type Props = {
 export default function Layout({ children }: Props) {
   const error = useNotAuthorized();
   console.log(error);
-  const [user,waiting] = useGetUser();
-
+  const [user, waiting] = useGetUser();
 
   // Waiting the whole page or just navBar!!
- if(!waiting){
-  return (
-    <>
-      <Toaster />
-      <div>
-        <Navbar waiting={waiting} user={user}/>
-        {children}
-      </div>
-    </>
-  );
- }
+  if (!waiting) {
+    return (
+      <>
+        <Toaster />
+        <div>
+          <Navbar waiting={waiting} user={user} />
+          <div className="border border-red-600 pb-64 pt-32 max-w-7xl mx-auto px-8">
+            {children}
+          </div>
+        </div>
+      </>
+    );
+  }
 }
