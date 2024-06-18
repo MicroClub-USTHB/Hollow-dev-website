@@ -18,7 +18,6 @@ export default function useGetUser(): UseGetUserResult {
           credentials: "include",
         });
         const data = await response.json();
-        console.log(data);
         if (data.data) {
           // If user not On MC server then clear Cookies and Session From DB
           if (data.data.status == "failed") {
@@ -32,6 +31,6 @@ export default function useGetUser(): UseGetUserResult {
       setWaiting(false);
     }
     getData();
-  }, []);
+  }, [setUser]);
   return [user, waiting];
 }

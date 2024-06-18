@@ -1,7 +1,8 @@
 import hollowKnight from "../../assets/character.png";
 export default function Loading() {
+  // bg-loading-bg-phone md:bg-loading-bg-desktop
   return (
-    <div className="h-screen flex justify-center items-center bg-loading-bg-phone md:bg-loading-bg-desktop">
+    <div className="h-screen flex justify-center items-center ">
       <div className="flex flex-col justify-center items-center gap-[5px]">
         <img
           src={hollowKnight}

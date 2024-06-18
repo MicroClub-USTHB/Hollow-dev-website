@@ -19,7 +19,7 @@ export default function Layout({ children }: Props) {
       <>
         <Toaster />
         <div>
-          <Navbar waiting={waiting} user={user} />
+          <Navbar user={user} />
           <div className="pb-64 pt-32 max-w-7xl mx-auto px-8 space-y-28">
             {children}
           </div>
@@ -27,4 +27,6 @@ export default function Layout({ children }: Props) {
       </>
     );
   }
+
+  return null;
 }
