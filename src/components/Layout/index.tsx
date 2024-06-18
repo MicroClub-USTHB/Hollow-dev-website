@@ -26,7 +26,7 @@ export default function Layout({ children }: Props) {
     loading ? <Loading/> : (
       <>
       <Toaster />
-      <div>
+      <div className="relative">
         <Navbar user={user}/>
         {children}
       </div>
