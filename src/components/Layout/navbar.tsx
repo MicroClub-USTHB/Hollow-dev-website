@@ -30,8 +30,8 @@ export default function Navbar({ user }: { user: UserI | null }) {
             </a>
           </ul>
           <HollowButton
-            title="Register Now"
-            href={user ? "/registration" : "http://localhost:4000/auth/discord"}
+            title={user?.isRegistred ? `Register (${user.username})` : "Register Now"}
+            href={user && !user.isRegistred ? "/registration" : user && user?.isRegistred ? "/" : "http://localhost:4000/auth/discord"}
           />
         </>
       ) : (
