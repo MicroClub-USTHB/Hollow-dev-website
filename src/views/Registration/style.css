@@ -14,3 +14,17 @@
     font-weight: 400;
     line-height: normal;
 }
+
+.registre{
+    position: relative;
+}
+.registre::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,50%);
+    z-index: 1;
+}

@@ -14,7 +14,7 @@ export default function Registration() {
     return <Navigate to={"/"} />;
 
   return (
-    <div className=" min-w-screen min-h-screen items-center justify-evenly bg-registerBackground bg-bottom bg-cover bg-no-repeat  flex flex-col pb-10 pt-20 md:py-10 ">
+    <div className=" min-w-screen min-h-screen items-center justify-evenly bg-registerBackground bg-center bg-contain bg-no-repeat  flex flex-col pb-10 pt-20 md:py-10 ">
       <Header />
       <Form />
     </div>
