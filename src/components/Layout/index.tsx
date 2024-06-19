@@ -1,7 +1,6 @@
 import { ReactNode,useState } from "react";
 import Navbar from "./navbar";
 import { Toaster } from "react-hot-toast";
-import useNotAuthorized from "../../hooks/useNotAuthorized";
 import useGetUser from "../../hooks/useGetUser";
 import Loading from "../UI/Loading";
 
@@ -10,8 +9,6 @@ type Props = {
 };
 
 export default function Layout({ children }: Props) {
-  const error = useNotAuthorized();
-  console.log(error);
   const [user,waiting] = useGetUser();
 
   const [loading, setLoading] = useState(true);
