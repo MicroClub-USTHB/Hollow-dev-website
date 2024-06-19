@@ -8,8 +8,9 @@ export interface IFormInput {
 }
 
 export interface UserI {
-  _id: string;
-  username: string;
-  status: string;
-  isRegistred: boolean;
+  _id?: string;
+  username?: string;
+  status?: string;
+  isRegistred?: boolean;
+  successRegistre:boolean;
 }
