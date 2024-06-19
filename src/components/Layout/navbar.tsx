@@ -14,7 +14,7 @@ export default function Header() {
                 <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
 
-            <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+            <div className={isNavOpen ? "block absolute w-full 100vh bg-[#07080D] flex flex-col items-center justify-evenly" : "hidden"}>
                 <div className="absolute top-0 right-0 px-8 py-8 cursor-pointer" onClick={() => setIsNavOpen(false)}>
                     <svg className="h-8 w-8 text-gray-600"
                         viewBox="0 0 24 24"
@@ -72,25 +72,6 @@ export default function Header() {
                 </a>
           </li>
         </ul>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: #07080D;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
 
         <HollowButton
             title="Register Now"
