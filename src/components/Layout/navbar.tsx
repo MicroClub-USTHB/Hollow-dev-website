@@ -20,7 +20,7 @@ export default function Header() {
         <div
           className={
             isNavOpen
-              ? "absolute w-full h-full top-0 left-0 bg-[#07080D] flex flex-col items-center justify-evenly"
+              ? "absolute w-full h-full top-0 left-0 bg-[#07080D] flex flex-col col-3 items-center justify-evenly"
               : "hidden"
           }
         >
@@ -42,7 +42,7 @@ export default function Header() {
             </svg>
           </div>
 
-          <ul className="flex text-center gap-10">
+          <ul className="flex flex-col text-center gap-10">
             <a className="relative group py-1.5 cursor-pointer" href="#hero">
               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white group-hover:w-full group-hover:transition-all"></span>
               Home

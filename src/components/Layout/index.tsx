@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "./navbar";
+import Footer from "./footer";
 import { Toaster } from "react-hot-toast";
 import useNotAuthorized from "../../hooks/useNotAuthorized";
 
@@ -18,6 +19,8 @@ export default function Layout({ children }: Props) {
         <Navbar />
         {children}
       </div>
+      <Footer></Footer>
+
     </>
   );
 }
