@@ -13,10 +13,10 @@ export default function Footer() {
       <h4 className='text-xs'>© 2024 Micro Club</h4>
 
         <div className='flex right-12 justify-between items-center w-40 h-9 mx-4'>
-            <div><SocialIcon url="https://www.instagram.com/microclub_usthb/" style={{ height: 25, width: 40 }} /></div>
-            <div><SocialIcon url="https://www.facebook.com/Micro.Club.USTHB/" style={{ height: 25, width: 25 }} /></div>
-            <div><SocialIcon url="https://x.com/club_micro?lang=fr" style={{ height: 25, width: 25 }} /></div>
-            <div><SocialIcon url="https://dz.linkedin.com/company/micro-club" style={{ height: 25, width: 25 }}/></div>
+            <div><SocialIcon url="https://www.instagram.com/microclub_usthb/" bgColor="white" fgColor="black"  style={{ height: 25, width: 40 }} /></div>
+            <div><SocialIcon url="https://www.facebook.com/Micro.Club.USTHB/" bgColor="white" fgColor="black"  style={{ height: 25, width: 25 }} /></div>
+            <div><SocialIcon url="https://x.com/club_micro?lang=fr" bgColor="white" fgColor="black"  style={{ height: 25, width: 25 }} /></div>
+            <div><SocialIcon url="https://dz.linkedin.com/company/micro-club" bgColor="white" fgColor="black"  style={{ height: 25, width: 25 }}/></div>
         </div>
     </div>
   )
