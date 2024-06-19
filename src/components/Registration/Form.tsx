@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { IFormInput, } from "../../types/types";
 import emailIcon from "../../assets/registration/mail-24.svg";
@@ -6,14 +7,13 @@ import userIcon from "../../assets/registration/person-24.svg";
 import drop from "../../assets/registration/Drop.svg";
 import "../../views/Registration/style.css";
 import SubmitArrow from "../../assets/registration/SubmitArrow.svg";
+import { useUser } from "../../hooks/useUser";
+
 
 const Form: React.FC = () => {
-    
-  const handleRedirectAndReload = () => {
-      window.location.href = "/";
-      window.location.reload();
-  };
-  
+  const {user,setUser} = useUser()
+  const navigate = useNavigate()
+
   // Initialize the useForm hook
   const {
     register,
@@ -24,7 +24,6 @@ const Form: React.FC = () => {
     
   // Define the submit handler
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log(data);
     try {
       const response = await fetch('http://localhost:4000/registre',{
         method:'POST',
@@ -36,7 +35,10 @@ const Form: React.FC = () => {
       })
       const result = await response.json()
       console.log(result);
-      if(result.status != "failed") handleRedirectAndReload()
+      if(result.status != "failed") {
+        setUser({...user,isRegistred:true,successRegistre:true})
+        navigate('/')       
+      }
     } catch (error) {
       console.log(error);
       
@@ -59,7 +61,7 @@ const Form: React.FC = () => {
                 type="text"
                 id="UserName"
                 placeholder="Full Name"
-                className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+                className="w-full font-font rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
                 {...register("fullName", { required: "Full Name is required" })}
               />
               <span className="pointer-events-none absolute w-fit h-fit top-1/2 right-3 -translate-y-1/2 end-0 grid  place-content-center text-gray-400">
@@ -67,7 +69,7 @@ const Form: React.FC = () => {
               </span>
             </div>
             {errors.fullName && (
-              <p className="text-red-500">{errors.fullName.message}</p>
+              <p className="text-red-500 font-font pt-2">{errors.fullName.message}</p>
             )}
           </div>
           {/* Email */}
@@ -77,7 +79,7 @@ const Form: React.FC = () => {
                 type="email"
                 id="UserEmail"
                 placeholder="Your Email"
-                className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+                className="w-full font-font rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -91,7 +93,7 @@ const Form: React.FC = () => {
               </span>
             </div>
             {errors.email ? (
-              <p className="text-red-500">{errors.email.message}</p>
+              <p className="text-red-500 font-font pt-2">{errors.email.message}</p>
             ):<p></p>}
           </div>
         </div>
@@ -104,7 +106,7 @@ const Form: React.FC = () => {
               type="text"
               id="TeamName"
               placeholder="Team Name"
-              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              className="w-full font-font rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
               {...register("teamName", { required: "Team Name is required" })}
             />
             <span className="pointer-events-none absolute w-fit h-fit top-1/2 right-3 -translate-y-1/2 end-0 grid place-content-center text-gray-400">
@@ -112,7 +114,7 @@ const Form: React.FC = () => {
             </span>
             </div>
             {errors.teamName && (
-              <p className="text-red-500">{errors.teamName.message}</p>
+              <p className="text-red-500 font-font pt-2">{errors.teamName.message}</p>
             )}
           </div>
           {/* MC Section */}
@@ -120,7 +122,7 @@ const Form: React.FC = () => {
             <div className="relative">
             <select
               id="section"
-              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] appearance-none"
+              className="w-full font-font rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] appearance-none"
               {...register("mcSection", { required: "MC Section is required" })}
             >
               <option value="">MC Section</option>
@@ -133,20 +135,20 @@ const Form: React.FC = () => {
             </span>
             </div>
             {errors.mcSection && (
-              <p className="text-red-500">{errors.mcSection.message}</p>
+              <p className="text-red-500 font-font pt-2">{errors.mcSection.message}</p>
             )}
           </div>
         </div>
         {/* Did you attend the workshop */}
         <div className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out flex flex-row justify-between items-center radiotext">
-          <label htmlFor="">Did you attend the workshop?</label>
+          <label htmlFor="" className="font-font">Did you attend the workshop?</label>
           <div className="flex flex-row items-center justify-center gap-2">
             <input
               type="radio"
               id="yes"
               value="yes"
-              className="appearance-none size-5 checked:bg-white border-[1.5px] border-[#EBEBEB66]/60 rounded-full transition duration-500 ease-in-out"
-              {...register("isAttended", { required: "Attendance is required" })}
+              className="appearance-none font-font size-5 checked:bg-white border-[1.5px] border-[#EBEBEB66]/60 rounded-full transition duration-500 ease-in-out"
+              {...register("isAttended",{required:"Please make sure to answer the question"})}
             />
             <label htmlFor="yes">Yes</label>
             <input
@@ -154,29 +156,31 @@ const Form: React.FC = () => {
               id="no"
               value="no"
               className="appearance-none size-5 checked:bg-white border-[1.5px] border-[#EBEBEB66]/60 rounded-full transition duration-500 ease-in-out"
-              {...register("isAttended", { required: "Attendance is required" })}
+              {...register("isAttended",{required:"Please make sure to answer the question"})}
             />
             <label htmlFor="no">No</label>
           </div>
           {errors.isAttended && (
-            <p className="text-red-500">{errors.isAttended.message}</p>
+            <p className="text-red-500 font-font ">{errors.isAttended.message}</p>
           ) }
         </div>
         {/* Motivation text area */}
+        <div>
         <textarea
           id="motivation"
-          className="w-full min-h-20 max-h-32 rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-2 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+          className="w-full font-font min-h-20 max-h-32 rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-2 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
           placeholder="What is your motivation for participating in this hackathon?"
           {...register("motivation", { required: "Motivation is required" })}
         ></textarea>
         {errors.motivation && (
-          <p className="text-red-500">{errors.motivation.message}</p>
+          <p className="text-red-500 font-font pt-2">{errors.motivation.message}</p>
         )}
+        </div>
         {/* Submit button */}
         <div className="flex justify-end">
           <button
             type="submit"
-            className="group rounded-2xl border-1 border-customBorder shadow-custom text-[#EBEBEB66]/900 px-4 py-2 hover:ring-2 hover:ring-[#EBEBEB66]/900 hover:bg-[#00020E]/60 transition duration-500 ease-in-out flex flex-row gap-2 justify-center items-center text-[#EBEBEB66]/60 text-[20px]"
+            className="group rounded-2xl font-font border-1 border-customBorder shadow-custom text-[#EBEBEB66]/900 px-4 py-2 hover:ring-2 hover:ring-[#EBEBEB66]/900 hover:bg-[#00020E]/60 transition duration-500 ease-in-out flex flex-row gap-2 justify-center items-center text-[#EBEBEB66]/60 text-[20px]"
           >
             Submit
             <img
