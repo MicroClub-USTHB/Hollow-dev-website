@@ -14,7 +14,7 @@ export default function Header() {
                 <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
 
-            <div className={isNavOpen ? "block absolute w-full 100vh bg-[#07080D] flex flex-col items-center justify-evenly" : "hidden"}>
+            <div className={isNavOpen ? "block absolute w-full h-full top-0 left-0 bg-[#07080D] flex flex-col items-center justify-evenly" : "hidden"}>
                 <div className="absolute top-0 right-0 px-8 py-8 cursor-pointer" onClick={() => setIsNavOpen(false)}>
                     <svg className="h-8 w-8 text-gray-600"
                         viewBox="0 0 24 24"
@@ -44,14 +44,15 @@ export default function Header() {
                 </ul>
 
             </div>
-            <HollowButton
-            title="Register Now"
-            href="http://localhost:4000/auth/discord/"
-            icon= {RegisterButton}
-        />
+            <div className={isNavOpen ? "hidden" : ""}>
+                <HollowButton 
+                title="Register Now"
+                href="http://localhost:4000/auth/discord/"
+                icon= {RegisterButton}/>
+            </div>
         </div>
 
-        <h1 className="text-center">HOLLOW DEV</h1>
+        <h1 className="mr-20 pl-12">HOLLOW DEV</h1>
         <ul className="hidden space-x-8 lg:flex">
           <li>
             <a className="relative group py-1.5 cursor-pointer" href="#hero">
@@ -72,11 +73,12 @@ export default function Header() {
                 </a>
           </li>
         </ul>
-
-        <HollowButton
-            title="Register Now"
-            href="http://localhost:4000/auth/discord/"
-        />
+        <div className={isNavOpen ? "" : ""}>
+            <HollowButton
+                title="Register Now"
+                href="http://localhost:4000/auth/discord/"
+            />
+        </div>
     </div>
   );
 }

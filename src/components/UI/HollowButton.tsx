@@ -14,7 +14,7 @@ export default function HollowButton(props: Props) {
         <Link
           to={props.href || "/"}
           onClick={props.onClick}
-          className="sm:hidden block w-12 h-12 hover:opacity-80"
+          className="sm:hidden block absolute overflow-hidden w-12 h-12 absolute right-0 -mt-3 mr-6 hover:opacity-80"
           style={{ backgroundImage: `url(${props.icon})` }}
         />
       ) : (
