@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Navbar from "./navbar";
 import { Toaster } from "react-hot-toast";
 import useGetUser from "../../hooks/useGetUser";
+import Footer from "./footer";
 
 type Props = {
   children: ReactNode;
@@ -15,11 +16,12 @@ export default function Layout({ children }: Props) {
     return (
       <>
         <Toaster />
-        <div>
-          <Navbar user={user} />
-          <div className="pb-64 pt-32 max-w-7xl mx-auto px-8 space-y-28">
+        <div className=" overflow-x-hidden ">
+          <Navbar />
+          <div className="pb-64 pt-32 max-w-7xl px-8 mx-auto space-y-28">
             {children}
           </div>
+          <Footer />
         </div>
       </>
     );
