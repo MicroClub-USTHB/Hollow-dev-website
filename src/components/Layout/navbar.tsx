@@ -1,8 +1,12 @@
 import { useState } from "react";
 import HollowButton from "../UI/HollowButton";
 import RegisterButton from "../../assets/RegisterIcon.svg";
+import { UserI } from "../../types/types";
 
-export default function Navbar(props) {
+type Props = {
+  user: UserI | null;
+};
+export default function Navbar(props: Props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
