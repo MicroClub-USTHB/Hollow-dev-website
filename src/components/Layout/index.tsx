@@ -18,9 +18,8 @@ export default function Layout({ children }: Props) {
       <div>
         <Navbar />
         {children}
+        <Footer />
       </div>
-      <Footer></Footer>
-
     </>
   );
 }
