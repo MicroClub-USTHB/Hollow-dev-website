@@ -17,7 +17,7 @@ export default function Layout({ children }: Props) {
       <>
         <Toaster />
         <div className=" overflow-x-hidden ">
-          <Navbar />
+          <Navbar user={user} />
           <div className="pb-64 pt-32 max-w-7xl px-8 mx-auto space-y-28">
             {children}
           </div>

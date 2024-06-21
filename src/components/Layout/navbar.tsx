@@ -2,7 +2,7 @@ import { useState } from "react";
 import HollowButton from "../UI/HollowButton";
 import RegisterButton from "../../assets/RegisterIcon.svg";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
         <div className={isNavOpen ? "hidden" : ""}>
           <HollowButton
-            title="Register Now"
+            title={props.user !== null ? `${props.user}` : "Register Now"}
             href="http://localhost:4000/auth/discord/"
             icon={RegisterButton}
           />
