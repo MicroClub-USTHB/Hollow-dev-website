@@ -31,7 +31,7 @@ export default function Challenges() {
       id : "IV",
       name : "Watcher knight",
       url: "./challenge images/4.jpg",
-      color: "bg-dark"
+      color: "bg-black"
     },
     {
       id : "IV",
@@ -55,7 +55,7 @@ export default function Challenges() {
       id : "IV",
       name : "Hollow knight",
       url: "./challenge images/8.jpg",
-      color: "bg-purple-950"
+      color: "bg-blue-950"
     },
     {
       id : "IV",
