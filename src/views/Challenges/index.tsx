@@ -34,31 +34,31 @@ export default function Challenges() {
       color: "bg-black"
     },
     {
-      id : "IV",
+      id : "V",
       name : "Broken Vessel",
       url: "./challenge images/5.jpg",
       color: "bg-orange-950"
     },
     {
-      id : "IV",
+      id : "VI",
       name : "Traitor Lord",
       url: "./challenge images/6.jpg",
       color: "bg-blue-950"
     },
     {
-      id : "IV",
+      id : "VII",
       name : "king grimm",
       url: "./challenge images/7.jpg",
       color: "bg-gray-950"
     },
     {
-      id : "IV",
+      id : "VIII",
       name : "Hollow knight",
       url: "./challenge images/8.jpg",
       color: "bg-blue-950"
     },
     {
-      id : "IV",
+      id : "IX",
       name : "The radiance",
       url: "./challenge images/9.jpg",
       color: "bg-yellow-950"
