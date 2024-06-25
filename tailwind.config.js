@@ -10,7 +10,8 @@ export default {
       },
       fontFamily: {
         CinzelDecorative: ["Cinzel Decorative", "serif"],
-        font: ["Cinzel"],
+        sedan: ["Sedan SC"],
+        font: ["Cinzel Decorative"]
       },
       backgroundImage: {
         registerBackground:
