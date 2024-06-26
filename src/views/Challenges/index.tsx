@@ -4,8 +4,9 @@ import MC from '../../assets/mcLogo.svg'
 import IT from '../../assets/itlogo.svg'
 import Arrow from '../../assets/challenges/Vector.svg'
 import Down from '../../assets/about-down.png'
-import Card from '../Challenges/card.jsx'
+import Card from './card.tsx'
 import { Link } from 'react-router-dom'
+import Navbar from '../../components/Layout/navbar.js'
 export default function Challenges() {
   
   const cards = [
@@ -13,67 +14,78 @@ export default function Challenges() {
       id : "I",
       name : "False knight",
       url: "./challenge images/1.jpg",
-      color: "bg-black"
+      color: "bg-black",
+      link: ""
     },
     {
       id : "II",
       name : "Hornet",
       url: "./challenge images/2.jpg",
-      color: "bg-stone-950"
+      color: "bg-stone-950",
+      link: ""
     },
     {
       id : "III",
       name : "Mantis Lords",
       url: "./challenge images/3.jpg",
-      color: "bg-green-950"
+      color: "bg-green-950",
+      link: ""
     },
     {
       id : "IV",
       name : "Watcher knight",
       url: "./challenge images/4.jpg",
-      color: "bg-black"
+      color: "bg-black",
+      link: ""
     },
     {
       id : "V",
       name : "Broken Vessel",
       url: "./challenge images/5.jpg",
-      color: "bg-orange-950"
+      color: "bg-orange-950",
+      link: ""
     },
     {
       id : "VI",
       name : "Traitor Lord",
       url: "./challenge images/6.jpg",
-      color: "bg-blue-950"
+      color: "bg-blue-950",
+      link: ""
     },
     {
       id : "VII",
       name : "king grimm",
       url: "./challenge images/7.jpg",
-      color: "bg-gray-950"
+      color: "bg-gray-950",
+      link: ""
     },
     {
       id : "VIII",
       name : "Hollow knight",
       url: "./challenge images/8.jpg",
-      color: "bg-blue-950"
+      color: "bg-blue-950",
+      link: ""
     },
     {
       id : "IX",
       name : "The radiance",
       url: "./challenge images/9.jpg",
-      color: "bg-yellow-950"
+      color: "bg-yellow-950",
+      link: ""
     },
   
   ]
 
   return (
+    <>
+    <Navbar />
     <div className=' p-5 min-h-[100vh] flex flex-col items-center gap-10  '>
       <div className=' flex items-center justify-around w-full'>
         <Link to={'/'}>
           <img src={Arrow} className=' size-6' />
         </Link>
         <div className=' flex items-center flex-col'>
-            <h1 className=' text-xl font-font'>Challenges</h1>
+            <h1 className=' text-2xl font-font'>Challenges</h1>
             <img src={Down} className=' w-64' />
         </div>
         <div className=' opacity-0'>t</div>
@@ -88,6 +100,7 @@ export default function Challenges() {
               name={card.name}
               url={card.url}
               color={card.color}
+              link={card.link}
               />
             )
           })}
@@ -98,5 +111,6 @@ export default function Challenges() {
         <img src={MC} className=' w-12' /> 
       </div>
     </div>
+    </>
   );
 }

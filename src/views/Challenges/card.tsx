@@ -1,6 +1,8 @@
 import Down from '../../assets/about-down.png'
-export default function Card(props) {
+export default function Card(props:any) {
   return(
+    <>
+    <a href={props.link} target='_blank'>
     <div className=" border-2  relative rounded-sm  h-72">
       <img src={props.url} className=' w-48 h-full  opacity-60 '/>
       <div className=' absolute top-2 left-3 text-2xl font-sedan'>
@@ -11,5 +13,7 @@ export default function Card(props) {
         <img src={Down}/>
       </div>
     </div>
+    </a>
+    </>
   )
 }
