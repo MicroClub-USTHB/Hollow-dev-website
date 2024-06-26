@@ -17,7 +17,7 @@ export default function Challenges() {
       color: "bg-black",
       shadow: "hover:shadow-cyan-950",
       link: "",
-      difficulty: "hard"
+      difficulty: "easy"
     },
     {
       id : "II",
@@ -26,7 +26,7 @@ export default function Challenges() {
       color: "bg-stone-950",
       shadow: "hover:shadow-stone-500",
       link: "",
-      difficulty: "mid"
+      difficulty: "easy"
     },
     {
       id : "III",
@@ -71,16 +71,16 @@ export default function Challenges() {
       color: "bg-red-950",
       shadow: "hover:shadow-red-900",
       link: "",
-      difficulty: "mid"
+      difficulty: "hard"
     },
     {
       id : "VIII",
       name : "Hollow knight",
       url: "./challenge images/8.jpg",
-      color: "bg-blue-950",
-      shadow: "hover:shadow-blue-900",
+      color: "bg-gray-900",
+      shadow: "hover:shadow-purple-950",
       link: "",
-      difficulty: "mid"
+      difficulty: "hard"
     },
     {
       id : "IX",
@@ -89,7 +89,7 @@ export default function Challenges() {
       color: "bg-yellow-950",
       shadow: "hover:shadow-yellow-900",
       link: "",
-      difficulty: "mid"
+      difficulty: "hard"
     },
   
   ]
