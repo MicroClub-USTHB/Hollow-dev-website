@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./views/Home/index";
 import Registration from "./views/Registration";
 import Challenges from "./views/Challenges";
+import ErrorPage from "./views/Error404";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/registration",
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/challenges",
     element: <Challenges />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 
