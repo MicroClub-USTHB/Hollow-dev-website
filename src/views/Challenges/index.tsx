@@ -6,7 +6,6 @@ import Arrow from '../../assets/challenges/Vector.svg'
 import Down from '../../assets/about-down.png'
 import Card from './card.tsx'
 import { Link } from 'react-router-dom'
-import Navbar from '../../components/Layout/navbar.js'
 export default function Challenges() {
   
   const cards = [
@@ -94,11 +93,10 @@ export default function Challenges() {
   
   ]
   return (
-    <div className=' relative'>
+    <div className='relative'>
       <img src={Ghost} className=' absolute w-36 right-0 top-20 z-[-1]'/>
-      <img src={Ghost} className=' absolute w-36 xl:left-32 left-0 scale-x-[-1] top-1/2 z-[-1]'/>
+      <img src={Ghost} className=' absolute w-36 xl:left-20 left-0 scale-x-[-1] top-1/2 z-[-1]'/>
       <img src={Ghost} className=' absolute w-36 xl:right-96 sm:right-0 md:right-56 right-0 bottom-10 z-[-1]'/>
-      <Navbar />
       <div className=' p-5 min-h-[100vh] flex flex-col items-center gap-10  '>
         <div className=' flex items-center justify-around w-full'>
               <Link to={'/'}>
