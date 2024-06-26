@@ -1,7 +1,7 @@
 import character from "../../assets/characterhead.png";
 import ErrorImage from "../../assets/hollow-knight-quirrel-hollow-knight-hd-wallpaper-preview.jpg";
-import { SparklesCore } from "../../components/UI/sparkles";
 import { Link } from "react-router-dom";
+import SparklesCore from "../../components/UI/sparkles";
 
 function ErrorPage() {
   return (

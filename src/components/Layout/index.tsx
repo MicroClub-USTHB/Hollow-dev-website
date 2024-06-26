@@ -3,7 +3,6 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import { Toaster } from "react-hot-toast";
 import useGetUser from "../../hooks/useGetUser";
-import Footer from "./footer";
 
 type Props = {
   children: ReactNode;
