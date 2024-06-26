@@ -93,7 +93,6 @@ export default function Challenges() {
     },
   
   ]
-
   return (
     <div className=' relative'>
       <img src={Ghost} className=' absolute w-36 right-0 top-20 z-[-1]'/>
