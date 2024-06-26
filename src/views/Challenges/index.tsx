@@ -15,6 +15,7 @@ export default function Challenges() {
       name : "False knight",
       url: "./challenge images/1.jpg",
       color: "bg-black",
+      shadow: "hover:shadow-cyan-950",
       link: "",
       difficulty: "hard"
     },
@@ -23,6 +24,7 @@ export default function Challenges() {
       name : "Hornet",
       url: "./challenge images/2.jpg",
       color: "bg-stone-950",
+      shadow: "hover:shadow-stone-500",
       link: "",
       difficulty: "mid"
     },
@@ -31,6 +33,7 @@ export default function Challenges() {
       name : "Mantis Lords",
       url: "./challenge images/3.jpg",
       color: "bg-green-950",
+      shadow: "hover:shadow-green-900",
       link: "",
       difficulty: "mid"
     },
@@ -39,6 +42,7 @@ export default function Challenges() {
       name : "Watcher knight",
       url: "./challenge images/4.jpg",
       color: "bg-black",
+      shadow: "hover:shadow-stone-700",
       link: "",
       difficulty: "mid"
     },
@@ -47,6 +51,7 @@ export default function Challenges() {
       name : "Broken Vessel",
       url: "./challenge images/5.jpg",
       color: "bg-orange-950",
+      shadow: "hover:shadow-orange-900",
       link: "",
       difficulty: "mid"
     },
@@ -55,6 +60,7 @@ export default function Challenges() {
       name : "Traitor Lord",
       url: "./challenge images/6.jpg",
       color: "bg-blue-950",
+      shadow: "hover:shadow-blue-900",
       link: "",
       difficulty: "mid"
     },
@@ -62,7 +68,8 @@ export default function Challenges() {
       id : "VII",
       name : "king grimm",
       url: "./challenge images/7.jpg",
-      color: "bg-gray-950",
+      color: "bg-red-950",
+      shadow: "hover:shadow-red-900",
       link: "",
       difficulty: "mid"
     },
@@ -71,6 +78,7 @@ export default function Challenges() {
       name : "Hollow knight",
       url: "./challenge images/8.jpg",
       color: "bg-blue-950",
+      shadow: "hover:shadow-blue-900",
       link: "",
       difficulty: "mid"
     },
@@ -79,6 +87,7 @@ export default function Challenges() {
       name : "The radiance",
       url: "./challenge images/9.jpg",
       color: "bg-yellow-950",
+      shadow: "hover:shadow-yellow-900",
       link: "",
       difficulty: "mid"
     },
@@ -87,9 +96,9 @@ export default function Challenges() {
 
   return (
     <div className=' relative'>
-      <img src={Ghost} className=' absolute w-32 right-0 top-20 z-[-1]'/>
-      <img src={Ghost} className=' absolute w-32 xl:left-40 left-0 scale-x-[-1] top-1/2 z-[-1]'/>
-      <img src={Ghost} className=' absolute w-32 xl:right-96 sm:right-0 md:right-56 right-0 bottom-10 z-[-1]'/>
+      <img src={Ghost} className=' absolute w-36 right-0 top-20 z-[-1]'/>
+      <img src={Ghost} className=' absolute w-36 xl:left-32 left-0 scale-x-[-1] top-1/2 z-[-1]'/>
+      <img src={Ghost} className=' absolute w-36 xl:right-96 sm:right-0 md:right-56 right-0 bottom-10 z-[-1]'/>
       <Navbar />
       <div className=' p-5 min-h-[100vh] flex flex-col items-center gap-10  '>
         <div className=' flex items-center justify-around w-full'>
@@ -114,14 +123,15 @@ export default function Challenges() {
                   color={card.color}
                   link={card.link}
                   difficulty={card.difficulty}
+                  shadow={card.shadow}
                   />
                 )
               })}
             </div>
           </div>
             <div className=' flex gap-5 pb-5 items-center justify-center'>
-              <img src={IT} className=' w-12' />
-              <img src={MC} className=' w-12' /> 
+              <img src={IT} className=' w-20' />
+              <img src={MC} className=' w-20' /> 
             </div>
       </div>
     </div>
