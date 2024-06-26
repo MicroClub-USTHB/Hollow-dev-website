@@ -10,12 +10,18 @@ const router = createBrowserRouter([
     element: (
         <ErrorPage />
     ),
-    errorElement: <div>404 Not Found</div>,
   },
   {
     path: "/registration",
     element: <Registration />,
   },
+  {
+    path: "*",
+    element: (
+        <ErrorPage />
+    ),
+    errorElement: <div>404 Not Found</div>,
+  }
 ]);
 
 export default router;
