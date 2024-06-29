@@ -5,72 +5,9 @@ import "swiper/css/navigation"; // Import the Navigation module CSS
 import "swiper/css/pagination"; // Import the Pagination module CSS
 import "styled-jsx";
 import { Navigation, Pagination } from "swiper/modules";
-
-const challenges = [
-  {
-    image: "/src/assets/challenge01.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor2 to-customColor1",
-    buttonBg: "bg-brown_button",
-  },
-  {
-    image: "/src/assets/challenge02.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightblue to-customColor_darckblue",
-    buttonBg: "bg-black_button",
-  },
-  {
-    image: "/src/assets/challenge03.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightpurpule to-customColor_darckpurpule",
-    buttonBg: "bg-purprle_button",
-  },
-  {
-    image: "/src/assets/challenge04.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightgreen to-customColor_darckgreen",
-    buttonBg: "bg-green_button",
-  },
-  {
-    image: "/src/assets/challenge 05.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightpurpule to-customColor_darckpurpule",
-    buttonBg: "bg-purprle_button",
-  },
-  {
-    image: "/src/assets/challenge06.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightblue to-customColor_darckblue",
-    buttonBg: "bg-black_button",
-  },
-  {
-    image: "/src/assets/challenge07.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor_lightgreen to-customColor_darckgreen",
-    buttonBg: "bg-green_button",
-  },
-  {
-    image: "/src/assets/challenge08.png",
-    title: "Challenge Details",
-    description: "More details",
-    bgGradient: "from-customColor2 to-customColor1",
-    buttonBg: "bg-brown_button",
-  },
-  {
-    image: "/src/assets/challenge09.png",
-    title: "Challenge Details",
-    description: "More details ",
-    bgGradient: "from-customColor_lightblue to-customColor_darckblue",
-    buttonBg: "bg-black_button",
-  },
-];
+import Up from "../../assets/faq-up.png";
+import Down from "../../assets/faq-down.png";
+import { challenges } from "../../utils/data";
 
 const ChallengesItems: React.FC = () => {
   return (
@@ -99,14 +36,13 @@ const ChallengesItems: React.FC = () => {
           border-radius: 10px;
         }
       `}</style>
-      <h2 className="text-center text-white text-3xl mb-9 mt-14">CHALLENGES</h2>
-      <img
-        src="/src/assets/image 99.png"
-        alt="Challenge"
-        className="mx-auto mt-0 pt-0"
-      />
-      <div className="py-8 px-4 bg-black">
-        <div className="-mb-48 pb-52">
+      <div className="flex items-center flex-col gap-2 mb-16">
+        <img src={Up} className="w-80" />
+        <h1 className="text-xl text-center">Challenges</h1>
+        <img src={Down} className="w-64" />
+      </div>
+      <div className="py-8bg-black">
+        <div className="">
           <Swiper
             spaceBetween={30}
             slidesPerView={3}

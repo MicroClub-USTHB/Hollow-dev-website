@@ -10,6 +10,7 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const [user, waiting] = useGetUser();
+  console.log(user, waiting);
 
   // Waiting the whole page or just navBar!!
   if (!waiting) {

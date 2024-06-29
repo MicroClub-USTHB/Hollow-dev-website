@@ -4,8 +4,8 @@ import ITLogo from "../../assets/itlogo.svg";
 
 export default function Footer() {
   return (
-    <div className="flex relative w-full h-16 items-center justify-between">
-      <div className="flex align-items ml-2 justify-between w-24">
+    <div className="flex relative w-full px-8 h-20 items-center justify-between">
+      <div className="flex align-items justify-between w-24">
         <img src={MCLogo} style={{ height: 45, width: 45 }} />
         <img src={ITLogo} style={{ height: 45, width: 45 }} />
       </div>

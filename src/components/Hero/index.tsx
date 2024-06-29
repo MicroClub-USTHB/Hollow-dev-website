@@ -1,4 +1,5 @@
 import HollowButton from "../UI/HollowButton";
+import trailer from "/src/assets/hollow-dev.mp4";
 import "../../assets/styles/trailer.css";
 const Hero: React.FC = () => {
   return (
@@ -17,13 +18,14 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <iframe
-          src="https://drive.google.com/file/d/1XGjEAxK0dQg4LPsTj3_qk_pWsiVK-KQL/preview"
-          width="800"
-          height="480"
-          className="border border-[#3D3D3D] rounded-xl trailer-iframe"
-          allow="autoplay"
-        ></iframe>
+        <video
+          autoPlay
+          className="trailer-iframe border border-[#3D3D3D] rounded-md"
+          controls
+        >
+          <source src={trailer} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );

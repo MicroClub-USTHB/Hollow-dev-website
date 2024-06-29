@@ -8,82 +8,8 @@ import Card from "./card.tsx";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/navbar.js";
 import useGetUser from "../../hooks/useGetUser.ts";
+import { challenges } from "../../utils/data.ts";
 export default function Challenges() {
-  const cards = [
-    {
-      id: "I",
-      name: "False knight",
-      url: "./challenge images/1.jpg",
-      color: "bg-black",
-      link: "",
-      difficulty: "hard",
-    },
-    {
-      id: "II",
-      name: "Hornet",
-      url: "./challenge images/2.jpg",
-      color: "bg-stone-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "III",
-      name: "Mantis Lords",
-      url: "./challenge images/3.jpg",
-      color: "bg-green-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "IV",
-      name: "Watcher knight",
-      url: "./challenge images/4.jpg",
-      color: "bg-black",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "V",
-      name: "Broken Vessel",
-      url: "./challenge images/5.jpg",
-      color: "bg-orange-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "VI",
-      name: "Traitor Lord",
-      url: "./challenge images/6.jpg",
-      color: "bg-blue-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "VII",
-      name: "king grimm",
-      url: "./challenge images/7.jpg",
-      color: "bg-gray-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "VIII",
-      name: "Hollow knight",
-      url: "./challenge images/8.jpg",
-      color: "bg-blue-950",
-      link: "",
-      difficulty: "mid",
-    },
-    {
-      id: "IX",
-      name: "The radiance",
-      url: "./challenge images/9.jpg",
-      color: "bg-yellow-950",
-      link: "",
-      difficulty: "mid",
-    },
-  ];
-
   const [user] = useGetUser();
   return (
     <div className="relative">
@@ -111,15 +37,17 @@ export default function Challenges() {
         <div>
           <img src={Hollow} className=" w-40" />
           <div className=" grid gap-12 xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-            {cards.map((card) => {
+            {challenges.map((challenge) => {
               return (
                 <Card
-                  id={card.id}
-                  name={card.name}
-                  url={card.url}
-                  color={card.color}
-                  link={card.link}
-                  difficulty={card.difficulty}
+                  description={challenge.description}
+                  key={challenge.id}
+                  id={challenge.id}
+                  title={challenge.title}
+                  imagePage={challenge.imagePage}
+                  color={challenge.color}
+                  link={challenge.link}
+                  difficulty={challenge.difficulty}
                 />
               );
             })}

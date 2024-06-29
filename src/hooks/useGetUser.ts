@@ -26,9 +26,10 @@ export default function useGetUser(): UseGetUserResult {
           } else setUser(data.data);
         }
       } catch (error) {
-        console.log(error);
+        console.log("Error in fetching user data");
+      } finally {
+        setWaiting(false);
       }
-      setWaiting(false);
     }
     getData();
   }, [setUser]);

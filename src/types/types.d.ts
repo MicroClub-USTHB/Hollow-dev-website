@@ -13,3 +13,16 @@ export interface UserI {
   status: string;
   isRegistred?: boolean;
 }
+
+export interface Challenge {
+  id: number;
+  image: string;
+  imagePage: string;
+  title: string;
+  description: string;
+  bgGradient: string;
+  buttonBg: string;
+  link: string;
+  difficulty: string;
+  color: string;
+}

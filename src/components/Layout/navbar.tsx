@@ -2,12 +2,15 @@ import { useState } from "react";
 import HollowButton from "../UI/HollowButton";
 import RegisterButton from "../../assets/RegisterIcon.svg";
 import { UserI } from "../../types/types";
+import { useLocation } from "react-router-dom";
 
 type Props = {
   user: UserI | null;
 };
 export default function Navbar(props: Props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
     <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
@@ -45,23 +48,25 @@ export default function Navbar(props: Props) {
             </svg>
           </div>
 
-          <ul className="flex flex-col absolute top-20 left-0 right-0 bg-black text-center pb-2 z-50 gap-10">
-            <a className="relative group py-1.5 cursor-pointer" href="#hero">
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-              Home
-            </a>
-            <a
-              className="relative group py-1.5 cursor-pointer"
-              href="#description"
-            >
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-              Description
-            </a>
-            <a className="relative group py-1.5 cursor-pointer" href="#faq">
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-              FaQ
-            </a>
-          </ul>
+          {isHomePage && (
+            <ul className="flex flex-col absolute top-20 left-0 right-0 bg-black text-center pb-2 z-50 gap-10">
+              <a className="relative group py-1.5 cursor-pointer" href="#hero">
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+                Home
+              </a>
+              <a
+                className="relative group py-1.5 cursor-pointer"
+                href="#description"
+              >
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+                Description
+              </a>
+              <a className="relative group py-1.5 cursor-pointer" href="#faq">
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+                FaQ
+              </a>
+            </ul>
+          )}
         </div>
         <div className={isNavOpen ? "hidden" : ""}>
           <HollowButton
@@ -73,29 +78,31 @@ export default function Navbar(props: Props) {
       </div>
 
       <h1 className="">HOLLOW DEV</h1>
-      <ul className="hidden space-x-8 md:flex">
-        <li>
-          <a className="relative group py-1.5 cursor-pointer" href="#hero">
-            <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            className="relative group py-1.5 cursor-pointer"
-            href="#description"
-          >
-            <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-            Description
-          </a>
-        </li>
-        <li>
-          <a className="relative group py-1.5 cursor-pointer" href="#faq">
-            <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-            FaQ
-          </a>
-        </li>
-      </ul>
+      {isHomePage && (
+        <ul className="hidden space-x-8 md:flex">
+          <li>
+            <a className="relative group py-1.5 cursor-pointer" href="#hero">
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              className="relative group py-1.5 cursor-pointer"
+              href="#description"
+            >
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+              Description
+            </a>
+          </li>
+          <li>
+            <a className="relative group py-1.5 cursor-pointer" href="#faq">
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
+              FaQ
+            </a>
+          </li>
+        </ul>
+      )}
       <div className={isNavOpen ? "" : ""}>
         <HollowButton
           title="Register Now"
