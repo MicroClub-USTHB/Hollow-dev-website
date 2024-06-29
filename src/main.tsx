@@ -4,6 +4,7 @@ import router from "./router";
 import "./index.css";
 import { UserProvider } from "./contexts/UserContexts";
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <UserProvider>
     <RouterProvider router={router} />
