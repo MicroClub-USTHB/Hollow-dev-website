@@ -5,7 +5,7 @@ import "./index.css";
 import { UserProvider } from "./contexts/UserContexts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
+  <UserProvider>
+    <RouterProvider router={router} />
+  </UserProvider>
 );
