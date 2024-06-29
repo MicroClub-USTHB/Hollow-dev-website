@@ -1,7 +1,15 @@
 import HollowButton from "../UI/HollowButton";
 import trailer from "/src/assets/hollow-dev.mp4";
 import "../../assets/styles/trailer.css";
+import { useEffect, useRef } from "react";
 const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      videoRef.current.volume = 0.5;
+    }
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center text-white">
       <div className="text-center mb-16">
@@ -19,6 +27,7 @@ const Hero: React.FC = () => {
 
       <div className="flex justify-center items-center">
         <video
+          ref={videoRef}
           autoPlay
           className="trailer-iframe border border-[#3D3D3D] rounded-md"
           controls

@@ -48,6 +48,7 @@ const ChallengesItems: React.FC = () => {
             slidesPerView={3}
             slidesPerGroup={3}
             navigation
+            autoplay={{ delay: 2000 }}
             pagination={{ clickable: true }}
             modules={[Navigation, Pagination]}
             breakpoints={{

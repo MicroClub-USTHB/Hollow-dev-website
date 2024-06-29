@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import { Toaster } from "react-hot-toast";
 import useGetUser from "../../hooks/useGetUser";
+import Loading from "../UI/Loading";
 
 type Props = {
   children: ReactNode;
@@ -10,10 +11,18 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const [user, waiting] = useGetUser();
-  console.log(user, waiting);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
-  // Waiting the whole page or just navBar!!
-  if (!waiting) {
+  if (loading) {
+    return <Loading />;
+  }
+  if (!waiting && !loading) {
     return (
       <>
         <Toaster />
