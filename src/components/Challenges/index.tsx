@@ -8,7 +8,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import Up from "../../assets/faq-up.png";
 import Down from "../../assets/faq-down.png";
 import { challenges } from "../../utils/data";
-
 const ChallengesItems: React.FC = () => {
   return (
     <>
@@ -36,7 +35,7 @@ const ChallengesItems: React.FC = () => {
           border-radius: 10px;
         }
       `}</style>
-      <div className="flex items-center flex-col gap-2 mb-16">
+      <div id="challenges" className="flex items-center flex-col gap-2 mb-16">
         <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Challenges</h1>
         <img src={Down} className="w-64" />

@@ -7,7 +7,7 @@ export default function Loading() {
         <img
           src={hollowKnight}
           alt="hollow knight"
-          className="h-[130px] w-[100px] bg-transparent z-10 opacity-90 animate-[floating_2000ms_infinite_1200ms] invisible"
+          className="h-[130px] w-[100px] bg-transparent z-10 opacity-90 animate-[floating_1000ms_infinite_600ms] invisible"
         />
         <div className="w-[80px] bg-circle h-[25px] animate-[circle_1200ms] rounded-[50%] drop-shadow-custom1 z-0"></div>
       </div>

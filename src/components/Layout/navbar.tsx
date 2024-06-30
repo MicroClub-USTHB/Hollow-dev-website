@@ -7,11 +7,12 @@ import { useLocation } from "react-router-dom";
 type Props = {
   user: UserI | null;
 };
+
 export default function Navbar(props: Props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-
+  console.log(props.user?.username);
   return (
     <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
       <div className="flex md:hidden">
@@ -56,10 +57,10 @@ export default function Navbar(props: Props) {
               </a>
               <a
                 className="relative group py-1.5 cursor-pointer"
-                href="#description"
+                href="#challenges"
               >
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-                Description
+                CHALLENGES
               </a>
               <a className="relative group py-1.5 cursor-pointer" href="#faq">
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
@@ -70,8 +71,12 @@ export default function Navbar(props: Props) {
         </div>
         <div className={isNavOpen ? "hidden" : ""}>
           <HollowButton
-            title={props.user !== null ? `${props.user}` : "Register Now"}
-            href="http://localhost:4000/auth/discord/"
+            title={props.user?.username || "Register Now"}
+            href={
+              props.user?.username !== null
+                ? "/registration"
+                : `https://hollow-dev-api.onrender.com/auth/discord/`
+            }
             icon={RegisterButton}
           />
         </div>
@@ -89,10 +94,10 @@ export default function Navbar(props: Props) {
           <li>
             <a
               className="relative group py-1.5 cursor-pointer"
-              href="#description"
+              href="#challenges"
             >
               <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-              Description
+              CHALLENGES
             </a>
           </li>
           <li>
@@ -105,8 +110,16 @@ export default function Navbar(props: Props) {
       )}
       <div className={isNavOpen ? "" : ""}>
         <HollowButton
-          title="Register Now"
-          href="http://localhost:4000/auth/discord/"
+          title={
+            props.user?.username
+              ? `Register (${props.user?.username})`
+              : "Register Now"
+          }
+          href={
+            props.user?.username !== null
+              ? "/registration"
+              : "https://hollow-dev-api.onrender.com/auth/discord/"
+          }
         />
       </div>
     </div>

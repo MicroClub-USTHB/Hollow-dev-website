@@ -14,7 +14,7 @@ export default function About() {
     "max-glare": 0.1,
   };
   return (
-    <div className="text-textColor flex flex-col items-center gap-8">
+    <div id="about" className="text-textColor flex flex-col items-center gap-8">
       <div className=" flex items-center flex-col gap-2">
         <img src={Up} className="w-80" />
         <p className="text-xl">About us</p>

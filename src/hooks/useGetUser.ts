@@ -13,10 +13,13 @@ export default function useGetUser(): UseGetUserResult {
     async function getData() {
       setWaiting(true);
       try {
-        const response = await fetch("http://localhost:4000/user", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://hollow-dev-api.onrender.com/user",
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
         const data = await response.json();
         if (data.data) {
           // If user not On MC server then clear Cookies and Session From DB

@@ -11,12 +11,13 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const [user, waiting] = useGetUser();
+  console.log(user);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
   if (loading) {

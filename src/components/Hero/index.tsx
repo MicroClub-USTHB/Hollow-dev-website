@@ -11,7 +11,10 @@ const Hero: React.FC = () => {
     }
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center text-white">
+    <div
+      id="hero"
+      className="flex flex-col items-center justify-center text-white"
+    >
       <div className="text-center mb-16">
         <h1 className="text-5xl font-bold mt-4 font-sedan">HOLLOW DEV</h1>
         <p className="text-lg mt-2 font-sedan">Code for the web kingdom!</p>

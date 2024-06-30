@@ -4,7 +4,7 @@ import Down from "../../assets/faq-down.png";
 
 function Faq() {
   return (
-    <div className="relative h-full w-full">
+    <div id="faq" className="relative h-full w-full">
       <div className="flex items-center flex-col gap-2 mb-16">
         <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Frequently Asked Questions</h1>
