@@ -1,4 +1,4 @@
-import hollowKnight from "../../assets/character.png";
+import hollowKnight from "/public/assets/character.png";
 export default function Loading() {
   // bg-loading-bg-phone md:bg-loading-bg-desktop
   return (

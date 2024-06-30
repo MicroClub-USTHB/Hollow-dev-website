@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HollowButton from "../UI/HollowButton";
-import RegisterButton from "../../assets/RegisterIcon.svg";
+import RegisterButton from "/public/assets/RegisterIcon.svg";
 import { UserI } from "../../types/types";
 import { useLocation } from "react-router-dom";
 

@@ -1,5 +1,5 @@
-import itlogo from "../../assets/itlogo.svg";
-import Borders from "../../assets/borders.png";
+import itlogo from "/public/assets/itlogo.svg";
+import Borders from "/public/assets/borders.png";
 
 type Props = {
   frontText: string;

@@ -1,6 +1,6 @@
 import { SocialIcon } from "react-social-icons";
-import MCLogo from "../../assets/mcLogo.svg";
-import ITLogo from "../../assets/itlogo.svg";
+import MCLogo from "/public/assets/mcLogo.svg";
+import ITLogo from "/public/assets/itlogo.svg";
 
 export default function Footer() {
   return (
