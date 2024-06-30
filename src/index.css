@@ -5,52 +5,65 @@
 @tailwind utilities;
 
 :root {
-  --bg: #00020e;
-  --color: #ffffff;
-  --blue: #4a6b85;
+    --bg: #00020e;
+    --color: #ffffff;
+    --blue: #4a6b85;
 }
 
 body {
-  /* LinearGradient background */
-  background: rgb(0, 3, 20);
-  background: -moz-linear-gradient(
-    309deg,
-    rgba(0, 3, 20, 1) 0%,
-    rgba(0, 1, 7, 1) 52%
-  );
-  background: -webkit-linear-gradient(
-    309deg,
-    rgba(0, 3, 20, 1) 0%,
-    rgba(0, 1, 7, 1) 52%
-  );
-  background: linear-gradient(
-    309deg,
-    rgba(0, 3, 20, 1) 0%,
-    rgba(0, 1, 7, 1) 52%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000314", endColorstr="#000107", GradientType=1);
-  font-family: "Cinzel Decorative", serif;
-  color: white;
+    /* LinearGradient background */
+    background: rgb(0, 3, 20);
+    background: -moz-linear-gradient(309deg,
+            rgba(0, 3, 20, 1) 0%,
+            rgba(0, 1, 7, 1) 52%);
+    background: -webkit-linear-gradient(309deg,
+            rgba(0, 3, 20, 1) 0%,
+            rgba(0, 1, 7, 1) 52%);
+    background: linear-gradient(309deg,
+            rgba(0, 3, 20, 1) 0%,
+            rgba(0, 1, 7, 1) 52%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000314", endColorstr="#000107", GradientType=1);
+    font-family: "Cinzel Decorative", serif;
+    color: white;
 
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+    background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
+}
+
+
+@layer utilities {
+    .my-rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    .perspective {
+        perspective: 1000px;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
 }
