@@ -31,54 +31,26 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000314", endColorstr="#000107", GradientType=1);
   font-family: "Cinzel Decorative", serif;
   color: white;
+
+  scroll-behavior: smooth;
 }
 
-/* Custom scrollbar for webkit browsers */
+/* width */
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 10px;
 }
 
+/* Track */
 ::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Light grey background for the track */
-  border-radius: 10px;
+  background: #f1f1f1;
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker grey for the thumb */
-  border-radius: 10px;
-  border: 3px solid #f0f0f0; /* Light grey border to create a hollow effect */
+  background: #888;
 }
 
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker grey on hover */
-}
-
-/* Custom scrollbar for Mozilla browsers */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) #f0f0f0; /* Dark grey thumb and light grey track */
-}
-
-*::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Ensure light grey background for the track */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker grey for the thumb */
-  border-radius: 10px;
-  border: 3px solid #f0f0f0; /* Light grey border to create a hollow effect */
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker grey on hover */
-}
-
-/* Custom scrollbar for Edge */
-body {
-  -ms-overflow-style: none; /* Disable default scrollbar in Edge */
-}
-
-body::-webkit-scrollbar {
-  display: none; /* Hide default scrollbar in Edge */
+  background: #555;
 }

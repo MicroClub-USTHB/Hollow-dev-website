@@ -40,7 +40,7 @@ const ChallengesItems: React.FC = () => {
         <h1 className="text-xl text-center">Challenges</h1>
         <img src={Down} className="w-64" />
       </div>
-      <div className="py-8 bg-black">
+      <div className="py-8">
         <div className="">
           <Swiper
             spaceBetween={30}

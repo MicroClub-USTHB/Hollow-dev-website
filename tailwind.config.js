@@ -15,7 +15,7 @@ export default {
       },
       backgroundImage: {
         registerBackground:
-          "url('/src/public/assets/registration/Registrationbg.svg')",
+          "url('/public/assets/registration/Registrationbg.svg')",
       },
       colors: {
         dark: "var(--bg)",

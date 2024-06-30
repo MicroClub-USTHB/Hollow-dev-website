@@ -1,5 +1,5 @@
 import HollowButton from "../UI/HollowButton";
-import trailer from "/src/public/assets/hollow-dev.mp4";
+import trailer from "/public/assets/hollow-dev.mp4";
 import "/public/assets/styles/trailer.css";
 import { useEffect, useRef } from "react";
 const Hero: React.FC = () => {
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <h1 className="text-5xl font-bold mt-4 font-sedan">HOLLOW DEV</h1>
         <p className="text-lg mt-2 font-sedan">Code for the web kingdom!</p>
         <img
-          src="/src/public/assets/hero-logo.png"
+          src="/public/assets/hero-logo.png"
           alt="hero-logo"
           className="w-32 mt-1 mx-auto absolute left-80 transform -translate-x-1/3"
         />
