@@ -12,7 +12,7 @@ function Faq() {
     {
       frontText: "How long does the competition last?",
       backText:
-        "The competition lasts for 5 days, starting from [start date/time] to [end date/time].",
+        "The competition lasts for 5 days, starting from 02 to 08 July.",
     },
     {
       frontText: "Can beginners participate?",
