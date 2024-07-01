@@ -50,13 +50,12 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
                 Home
               </a>
-              <Link
+              <a
                 className="relative group py-1.5 cursor-pointer"
-                to="/challenges"
               >
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-                CHALLENGES
-              </Link>
+                About
+              </a>
               <a className="relative group py-1.5 cursor-pointer" href="#faq">
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
                 FaQ
@@ -66,8 +65,8 @@ export default function Navbar() {
         </div>
         <div className={isNavOpen ? "hidden" : ""}>
           <HollowButton
-            title="Register Now"
-            href="/registration"
+            title="challenges"
+            href="/Challenges"
             icon={RegisterButton}
           />
         </div>
@@ -83,13 +82,12 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <Link
+            <a
               className="relative group py-1.5 cursor-pointer"
-              to="/challenges"
             >
               <span className="absolute bottom-0 left-0 w-0 h-[1px] text-white bg-white group-hover:w-full group-hover:transition-all"></span>
-              CHALLENGES
-            </Link>
+              About
+            </a>
           </li>
           <li>
             <a className="relative group py-1.5 cursor-pointer" href="#faq">
@@ -100,7 +98,7 @@ export default function Navbar() {
         </ul>
       )}
       <div>
-        <HollowButton title="Register Now" href="/registration" />
+        <HollowButton title="challenges" href="/challenges" />
       </div>
     </div>
   );
