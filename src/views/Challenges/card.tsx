@@ -13,7 +13,7 @@ export default function Card(props: Props) {
   return (
     <>
       <a href={props.link} target="_blank">
-        <div className=" border-2  relative rounded-sm  h-72">
+        <div className=" border-2 relative rounded-sm  h-72">
           <img src={props.imagePage} className=" w-48 h-full  opacity-60 " />
           <div className=" absolute top-2 left-3 text-2xl font-sedan">
             {props.id}

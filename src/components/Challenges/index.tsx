@@ -14,12 +14,12 @@ const ChallengesItems: React.FC = () => {
       <style jsx global>{`
         .swiper-pagination {
           position: relative;
-          margin-top: 50px;
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%;
         }
+
         .swiper-pagination-bullet {
           background-color: rgba(255, 255, 255, 0.3); /* Grey bullets */
           width: 20px;
@@ -35,12 +35,12 @@ const ChallengesItems: React.FC = () => {
           border-radius: 10px;
         }
       `}</style>
-      <div id="challenges" className="flex items-center flex-col gap-2  md:mb-16">
+      <div id="challenges" className="flex items-center flex-col gap-2">
         <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Challenges</h1>
         <img src={Down} className="w-64" />
       </div>
-      <div className="md:py-8">
+      <div className="">
         <div className="">
           <Swiper
             spaceBetween={30}
