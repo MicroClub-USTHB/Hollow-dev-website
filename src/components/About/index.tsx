@@ -27,7 +27,7 @@ export default function About() {
         flex flex-col sm:flex-row md:grid 
         md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
       >
-        <div >
+        <div>
           <p className=" font-bold text-3xl pb-3">WHO ARE WE ?</p>
           <p className=" text-[14px] w-60 ">
             The IT Section, one of three key sections at Micro Club, The section
@@ -61,7 +61,7 @@ export default function About() {
             We aim to elevate the level of our members and turn them into strong
             back-end knights. Hollow Dev is designed to help you practice what
             you learned in the bootcamp. By solving challenges, We promise you
-            that are building projects that will not only deepen your
+            that you will build projects that will not only deepen your
             understanding of backend concepts but also make your Portfolio
             shine. So, grab your key-sword and start coding !
           </p>

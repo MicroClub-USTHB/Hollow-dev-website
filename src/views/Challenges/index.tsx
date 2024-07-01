@@ -40,6 +40,7 @@ export default function Challenges() {
                 <Card
                   description={challenge.description}
                   key={challenge.id}
+                  shadow={challenge.shadow}
                   id={challenge.id}
                   title={challenge.title}
                   imagePage={challenge.imagePage}

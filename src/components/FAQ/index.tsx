@@ -13,7 +13,7 @@ const cardsText = [
     id: 1,
 
     frontText: "How long does the competition last?",
-    backText: "The competition lasts for 5 days, starting from 02 to 08 July.",
+    backText: "The competition lasts for 5 days, starting from 04 to 08 July.",
   },
   {
     id: 2,

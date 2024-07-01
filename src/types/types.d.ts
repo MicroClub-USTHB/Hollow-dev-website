@@ -16,7 +16,7 @@ export interface UserI {
 }
 
 export interface Challenge {
-  id: number;
+  id: string;
   image: string;
   imagePage: string;
   title: string;
@@ -26,4 +26,5 @@ export interface Challenge {
   link: string;
   difficulty: string;
   color: string;
+  shadow: string;
 }

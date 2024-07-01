@@ -2,9 +2,11 @@ import { Challenge } from "../types/types";
 
 export const challenges: Challenge[] = [
   {
-    id: 1,
+    id: "I",
     link: "",
     difficulty: "hard",
+    shadow: "hover:shadow-cyan-950",
+
     image: "/assets/challenge01.png",
     title: "Coming Soon...",
     color: "bg-black",
@@ -14,10 +16,11 @@ export const challenges: Challenge[] = [
     imagePage: "/assets/challenge-images/1.jpg",
   },
   {
-    id: 1,
+    id: "II",
     link: "",
     difficulty: "hard",
     color: "bg-stone-950",
+    shadow: "hover:shadow-stone-500",
 
     imagePage: "/assets/challenge-images/2.jpg",
     image: "/assets/challenge02.png",
@@ -27,11 +30,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-black_button",
   },
   {
-    id: 1,
+    id: "III",
     link: "",
     difficulty: "hard",
     color: "bg-green-950",
     imagePage: "/assets/challenge-images/3.jpg",
+    shadow: "hover:shadow-green-900",
 
     image: "/assets/challenge03.png",
     title: "Coming Soon...",
@@ -40,11 +44,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-purprle_button",
   },
   {
-    id: 1,
+    id: "IV",
     link: "",
     difficulty: "hard",
     color: "bg-orange-950",
     imagePage: "/assets/challenge-images/4.jpg",
+    shadow: "hover:shadow-stone-700",
 
     image: "/assets/challenge04.png",
     title: "Coming Soon...",
@@ -53,11 +58,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-green_button",
   },
   {
-    id: 1,
+    id: "V",
     link: "",
     difficulty: "hard",
     color: "bg-blue-950",
     imagePage: "/assets/challenge-images/5.jpg",
+    shadow: "hover:shadow-orange-900",
 
     image: "/assets/challenge 05.png",
     title: "Coming Soon...",
@@ -66,11 +72,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-purprle_button",
   },
   {
-    id: 1,
+    id: "VI",
     link: "",
     difficulty: "hard",
     color: "bg-gray-950",
     imagePage: "/assets/challenge-images/6.jpg",
+    shadow: "hover:shadow-blue-900",
 
     image: "/assets/challenge06.png",
     title: "Coming Soon...",
@@ -79,11 +86,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-black_button",
   },
   {
-    id: 1,
+    id: "VII",
     link: "",
     difficulty: "hard",
     color: "bg-blue-950",
     imagePage: "/assets/challenge-images/7.jpg",
+    shadow: "hover:shadow-red-900",
 
     image: "/assets/challenge07.png",
     title: "Coming Soon...",
@@ -92,11 +100,12 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-green_button",
   },
   {
-    id: 1,
+    id: "VIII",
     link: "",
     difficulty: "hard",
     color: "bg-yellow-950",
     imagePage: "/assets/challenge-images/8.jpg",
+    shadow: "hover:shadow-purple-950",
 
     image: "/assets/challenge08.png",
     title: "Coming Soon...",
@@ -105,8 +114,9 @@ export const challenges: Challenge[] = [
     buttonBg: "bg-brown_button",
   },
   {
-    id: 1,
+    id: "IX",
     link: "",
+    shadow: "hover:shadow-yellow-900",
     difficulty: "hard",
     color: "bg-red-950",
     image: "/assets/challenge09.png",
