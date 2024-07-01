@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useUser } from "../../hooks/useUser";
+import { Link } from "react-router-dom";
 import Footer from "../../components/Registration/Footer";
 import Header from "../../components/Registration/Header";
 import Form from "../../components/Registration/Form";
@@ -8,11 +7,6 @@ export default function Registration() {
   useEffect(() => {
     document.title = "Hollow-Dev | Registration";
   }, []);
-
-  const { user } = useUser();
-
-  if (!user || user.isRegistred || user.status == "failed")
-    return <Navigate to={"/"} />;
 
   return (
     <>

@@ -8,7 +8,6 @@ type Props = {
 };
 
 export default function HollowButton(props: Props) {
-  console.log(props.href);
   return (
     <>
       {props.icon ? (

@@ -7,10 +7,8 @@ import Down from "/assets/about-down.png";
 import Card from "./card.tsx";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/navbar.js";
-import useGetUser from "../../hooks/useGetUser.ts";
 import { challenges } from "../../utils/data.ts";
 export default function Challenges() {
-  const [user] = useGetUser();
   return (
     <div className="relative">
       <img src={Ghost} className="absolute w-32 right-0 top-20 z-[-1]" />
@@ -22,7 +20,7 @@ export default function Challenges() {
         src={Ghost}
         className=" absolute w-32 xl:right-96 sm:right-0 md:right-56 right-0 bottom-10 z-[-1]"
       />
-      <Navbar user={user} />
+      <Navbar />
       <div className=" p-5 min-h-[100vh] flex flex-col items-center gap-10  ">
         <div className=" flex items-center justify-around w-full">
           <Link to={"/"}>

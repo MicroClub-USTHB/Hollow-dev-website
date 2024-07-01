@@ -1,12 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
 import "./index.css";
-import { UserProvider } from "./contexts/UserContexts";
+import Router from "./router";
 
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <UserProvider>
-    <RouterProvider router={router} />
-  </UserProvider>
-);
+ReactDOM.createRoot(document.getElementById("root")!).render(<Router />);
