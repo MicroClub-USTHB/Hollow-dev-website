@@ -98,7 +98,7 @@ export default function Navbar() {
         </ul>
       )}
       <div>
-        <HollowButton title="challenges" href="/challenges" />
+        <HollowButton title="SEE CHALLENGES" href="/challenges" />
       </div>
     </div>
   );

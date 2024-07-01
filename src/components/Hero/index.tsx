@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           className="w-32 mt-1 mx-auto absolute left-64 transform -translate-x-1/3"
         />
         <div className="bg-transparent text-white flex items-center justify-center text-xl mt-4">
-          <HollowButton title="Registration" href="/registration" />
+          <HollowButton title="REGISTER NOW" href="/registration" />
         </div>
       </div>
 
