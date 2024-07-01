@@ -19,7 +19,7 @@ const Form: React.FC = () => {
 
   // Define the submit handler
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    fetch(`https://registration-api-http.onrender.com/registration`, {
+    fetch("https://registration-api-http.onrender.com/registration", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
