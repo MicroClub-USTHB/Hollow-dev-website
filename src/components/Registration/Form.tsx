@@ -6,7 +6,7 @@ import userIcon from "/assets/registration/person-24.svg";
 import drop from "/assets/registration/Drop.svg";
 import "../../views/Registration/style.css";
 import SubmitArrow from "/assets/registration/SubmitArrow.svg";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const Form: React.FC = () => {
   // Initialize the useForm hook
@@ -49,6 +49,7 @@ const Form: React.FC = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="p-2 md:px-16 w-5/6 text-white space-y-4"
       >
+        <Toaster />
         {/* full name + email div */}
         <div className="flex flex-col md:flex-row  items-center justify-center gap-6">
           {/* Full Name */}
