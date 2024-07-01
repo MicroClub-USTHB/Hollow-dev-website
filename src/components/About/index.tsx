@@ -1,6 +1,6 @@
-import itlogo from "/public/assets/itlogo.svg";
-import Up from "/public/assets/about-up.png";
-import Down from "/public/assets/about-down.png";
+import itlogo from "/assets/itlogo.svg";
+import Up from "/assets/about-up.png";
+import Down from "/assets/about-down.png";
 import { TiltOptions } from "vanilla-tilt";
 import Tilt from "./Tilt";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { IFormInput } from "../../types/types";
-import emailIcon from "/public/assets/registration/mail-24.svg";
-import userIcon from "/public/assets/registration/person-24.svg";
-import drop from "/public/assets/registration/Drop.svg";
+import emailIcon from "/assets/registration/mail-24.svg";
+import userIcon from "/assets/registration/person-24.svg";
+import drop from "/assets/registration/Drop.svg";
 import "../../views/Registration/style.css";
-import SubmitArrow from "/public/assets/registration/SubmitArrow.svg";
+import SubmitArrow from "/assets/registration/SubmitArrow.svg";
 
 const Form: React.FC = () => {
   // Initialize the useForm hook

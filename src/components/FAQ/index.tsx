@@ -1,6 +1,6 @@
 import FaqItem from "../../components/FAQ/FaqItem.tsx";
-import Up from "/public/assets/faq-up.png";
-import Down from "/public/assets/faq-down.png";
+import Up from "/assets/faq-up.png";
+import Down from "/assets/faq-down.png";
 
 function Faq() {
   const cardsText = [

@@ -14,8 +14,7 @@ export default {
         font: ["Cinzel Decorative"],
       },
       backgroundImage: {
-        registerBackground:
-          "url('/public/assets/registration/Registrationbg.svg')",
+        registerBackground: "url('/assets/registration/Registrationbg.svg')",
       },
       colors: {
         dark: "var(--bg)",

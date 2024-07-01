@@ -1,9 +1,9 @@
-import Hollow from "/public/assets/challenges/hollow.svg";
-import Ghost from "/public/assets/challenges/ghost.svg";
-import MC from "/public/assets/mcLogo.svg";
-import IT from "/public/assets/itlogo.svg";
-import Arrow from "/public/assets/challenges/Vector.svg";
-import Down from "/public/assets/about-down.png";
+import Hollow from "/assets/challenges/hollow.svg";
+import Ghost from "/assets/challenges/ghost.svg";
+import MC from "/assets/mcLogo.svg";
+import IT from "/assets/itlogo.svg";
+import Arrow from "/assets/challenges/Vector.svg";
+import Down from "/assets/about-down.png";
 import Card from "./card.tsx";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/navbar.js";

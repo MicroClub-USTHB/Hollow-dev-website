@@ -1,5 +1,5 @@
-import character from "/public/assets/characterhead.png";
-import ErrorImage from "/public/assets/hollow-knight-quirrel-hollow-knight-hd-wallpaper-preview.jpg";
+import character from "/assets/characterhead.png";
+import ErrorImage from "/assets/hollow-knight-quirrel-hollow-knight-hd-wallpaper-preview.jpg";
 import { Link } from "react-router-dom";
 import SparklesCore from "../../components/UI/sparkles";
 

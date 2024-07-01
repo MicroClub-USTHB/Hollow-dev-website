@@ -1,4 +1,4 @@
-import Down from "/public/assets/about-down.png";
+import Down from "/assets/about-down.png";
 
 type Props = {
   id: number;

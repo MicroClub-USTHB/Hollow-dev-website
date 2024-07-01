@@ -1,5 +1,5 @@
-import itlogo from "/public/assets/itlogo.svg";
-import pattern from "/public/assets/registration/pattern.svg";
+import itlogo from "/assets/itlogo.svg";
+import pattern from "/assets/registration/pattern.svg";
 const Header = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-3">
