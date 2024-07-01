@@ -17,9 +17,24 @@ const Form: React.FC = () => {
   } = useForm<IFormInput>();
 
   // Define the submit handler
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     console.log(data);
-    reset();
+    fetch(`${process.env.VITE_API_URL}/registration`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        res.json();
+      })
+      .then((data) => {
+        reset();
+
+        console.log(data);
+      })
+      .finally(() => {});
   };
 
   return (
@@ -31,7 +46,7 @@ const Form: React.FC = () => {
         {/* full name + email div */}
         <div className="flex flex-col md:flex-row  items-center justify-center gap-6">
           {/* Full Name */}
-          <div className="relative  w-full md:w-1/2">
+          <div className="relative w-full md:w-1/2">
             <input
               type="text"
               id="UserName"
@@ -43,7 +58,7 @@ const Form: React.FC = () => {
               <img src={userIcon} alt="" className="size-4" />
             </span>
             {errors.fullName && (
-              <p className="text-red-500">{errors.fullName.message}</p>
+              <p className="text-red-500 mt-2">{errors.fullName.message}</p>
             )}
           </div>
           {/* Email */}
@@ -65,7 +80,7 @@ const Form: React.FC = () => {
               <img src={emailIcon} alt="" className="size-4" />
             </span>
             {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
+              <p className="text-red-500 mt-2">{errors.email.message}</p>
             )}
           </div>
         </div>
@@ -84,7 +99,7 @@ const Form: React.FC = () => {
               <img src={userIcon} alt="team icon" className="size-4" />
             </span>
             {errors.teamName && (
-              <p className="text-red-500">{errors.teamName.message}</p>
+              <p className="text-red-500 mt-2">{errors.teamName.message}</p>
             )}
           </div>
           {/* MC Section */}
@@ -94,17 +109,15 @@ const Form: React.FC = () => {
               className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] appearance-none"
               {...register("mcSection", { required: "MC Section is required" })}
             >
-              <option value="">MC Section</option>
-              <option value="AI">AI</option>
-              <option value="Web">Web</option>
-              <option value="Game">Game</option>
-              <option value="Design">Design</option>
+              <option value="it">IT</option>
+              <option value="gamedev">Game Dev</option>
+              <option value="robotics">Robotics</option>
             </select>
             <span className="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-gray-400">
               <img src={drop} alt="" className="size-4" />
             </span>
             {errors.mcSection && (
-              <p className="text-red-500">{errors.mcSection.message}</p>
+              <p className="text-red-500 mt-2">{errors.mcSection.message}</p>
             )}
           </div>
         </div>
@@ -130,7 +143,7 @@ const Form: React.FC = () => {
             <label htmlFor="no">No</label>
           </div>
           {errors.attended && (
-            <p className="text-red-500">{errors.attended.message}</p>
+            <p className="text-red-500 mt-2">{errors.attended.message}</p>
           )}
         </div>
         {/* Motivation text area */}
@@ -141,7 +154,7 @@ const Form: React.FC = () => {
           {...register("motivation", { required: "Motivation is required" })}
         ></textarea>
         {errors.motivation && (
-          <p className="text-red-500">{errors.motivation.message}</p>
+          <p className="text-red-500 mt-2">{errors.motivation.message}</p>
         )}
         {/* Submit button */}
         <div className="flex justify-end">
