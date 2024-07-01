@@ -9,7 +9,7 @@ export default function Footer() {
         <img src={MCLogo} style={{ height: 45, width: 45 }} />
         <img src={ITLogo} style={{ height: 45, width: 45 }} />
       </div>
-      <h4 className="text-xs">© 2024 Micro Club</h4>
+      <h4 className="text-xs hidden md:block">© 2024 Micro Club</h4>
 
       <div className="flex right-12 justify-between items-center w-40 h-9 mx-4">
         <div>
