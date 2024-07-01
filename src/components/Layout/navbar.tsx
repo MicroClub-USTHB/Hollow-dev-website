@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HollowButton from "../UI/HollowButton";
-import RegisterButton from "../../assets/RegisterIcon.svg";
+import RegisterButton from "/public/assets/RegisterIcon.svg";
 import { UserI } from "../../types/types";
 import { useLocation } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function Navbar(props: Props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  console.log(props.user?.username);
+
   return (
     <div className="bg-transparent text-white flex items-center justify-between px-8 h-20 text-xl">
       <div className="flex md:hidden">
@@ -71,11 +71,15 @@ export default function Navbar(props: Props) {
         </div>
         <div className={isNavOpen ? "hidden" : ""}>
           <HollowButton
-            title={props.user?.username || "Register Now"}
+            title={
+              props.user?.username
+                ? `Register (${props.user?.username})`
+                : "Register Now"
+            }
             href={
               props.user?.username !== null
                 ? "/registration"
-                : `https://hollow-dev-api.onrender.com/auth/discord/`
+                : "https://hollow-dev-api.onrender.com/auth/discord/"
             }
             icon={RegisterButton}
           />
@@ -108,7 +112,7 @@ export default function Navbar(props: Props) {
           </li>
         </ul>
       )}
-      <div className={isNavOpen ? "" : ""}>
+      <div>
         <HollowButton
           title={
             props.user?.username
