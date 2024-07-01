@@ -51,6 +51,9 @@ const ChallengesItems: React.FC = () => {
             pagination={{ clickable: true }}
             modules={[Navigation, Pagination]}
             breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
               640: {
                 slidesPerView: 1,
               },

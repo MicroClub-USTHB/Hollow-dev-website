@@ -23,9 +23,11 @@ export default function About() {
 
       <Tilt
         options={tiltOptions}
-        className="bg-[#07080D] cursor-pointer p-16 rounded-2xl grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
+        className="bg-[#07080D] cursor-pointer p-8 md:p-16 rounded-2xl 
+        flex flex-col sm:flex-row md:grid 
+        md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 justify-between border-[#3D3D3D] border w-full card"
       >
-        <div>
+        <div >
           <p className=" font-bold text-3xl pb-3">WHO ARE WE ?</p>
           <p className=" text-[14px] w-60 ">
             The IT Section, one of three key sections at Micro Club, The section
@@ -33,14 +35,14 @@ export default function About() {
           </p>
         </div>
 
-        <div className=" flex justify-end">
-          <img src={itlogo} className=" w-64 xl:pt-0 md:pt-0 sm:pt-0 pt-10" />
+        <div className=" flex justify-end ">
+          <img src={itlogo} className=" w-64  pt-5 md:pt-0" />
         </div>
       </Tilt>
       <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  ">
         <Tilt
           options={tiltOptions}
-          className="bg-[#07080D] cursor-pointer p-16 rounded-2xl border-[#3D3D3D] border card "
+          className="bg-[#07080D] cursor-pointer p-8 md:p-16 rounded-2xl border-[#3D3D3D] border card "
         >
           <p className=" font-bold text-3xl pb-3">What is hollow dev ?</p>
           <p className="text-[14px]">
@@ -52,7 +54,7 @@ export default function About() {
 
         <Tilt
           options={tiltOptions}
-          className="bg-[#07080D] cursor-pointer p-16 rounded-2xl border-[#3D3D3D] border card"
+          className="bg-[#07080D] cursor-pointer p-8 md:p-16 rounded-2xl border-[#3D3D3D] border card"
         >
           <p className=" font-bold text-3xl pb-3">Our vision</p>
           <p className=" text-[14px] ">

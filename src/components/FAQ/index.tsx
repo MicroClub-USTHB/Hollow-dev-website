@@ -37,14 +37,14 @@ function Faq() {
   ];
 
   return (
-    <div id="faq" className="relative h-full w-full space-y-20">
+    <div id="faq" className="relative h-full w-full space-y-10 md:space-y-20">
       <div className="flex items-center flex-col gap-2">
         <img src={Up} className="w-80" />
         <h1 className="text-xl text-center">Frequently Asked Questions</h1>
         <img src={Down} className=" w-64" />
       </div>
       <div className="flex justify-center align-center">
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5  md:gap-20">
           {cardsText.map((card) => (
             <FaqItem frontText={card.frontText} backText={card.backText} />
           ))}
