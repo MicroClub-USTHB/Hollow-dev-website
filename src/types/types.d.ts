@@ -5,6 +5,7 @@ export interface IFormInput {
   mcSection: string;
   attended: string;
   motivation: string;
+  discordUsername: string;
 }
 
 export interface UserI {

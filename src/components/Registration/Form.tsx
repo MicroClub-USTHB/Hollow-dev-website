@@ -6,6 +6,7 @@ import userIcon from "/assets/registration/person-24.svg";
 import drop from "/assets/registration/Drop.svg";
 import "../../views/Registration/style.css";
 import SubmitArrow from "/assets/registration/SubmitArrow.svg";
+import toast from "react-hot-toast";
 
 const Form: React.FC = () => {
   // Initialize the useForm hook
@@ -18,7 +19,6 @@ const Form: React.FC = () => {
 
   // Define the submit handler
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log(data);
     fetch(`${process.env.VITE_API_URL}/registration`, {
       method: "POST",
       headers: {
@@ -29,12 +29,18 @@ const Form: React.FC = () => {
       .then((res) => {
         res.json();
       })
-      .then((data) => {
+      .then(() => {
         reset();
 
-        console.log(data);
+        toast.success("Registration successful", {
+          duration: 2000,
+        });
       })
-      .finally(() => {});
+      .catch(() => {
+        toast.error("Registration failed", {
+          duration: 2000,
+        });
+      });
   };
 
   return (
@@ -59,6 +65,23 @@ const Form: React.FC = () => {
             </span>
             {errors.fullName && (
               <p className="text-red-500 mt-2">{errors.fullName.message}</p>
+            )}
+          </div>
+          {/* Discord */}
+          <div className="relative  w-full md:w-1/2">
+            <input
+              type="text"
+              id="discordUsername"
+              placeholder="Discord Username e.g. : ramzy1453"
+              className="w-full rounded-2xl border-1 border-customBorder bg-[#00020E]/55 shadow-custom text-[#EBEBEB66]/60 px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent focus:bg-[#00020E] transition duration-500 ease-in-out customText"
+              {...register("discordUsername", {
+                required: "Discord is required",
+              })}
+            />
+            {errors.discordUsername && (
+              <p className="text-red-500 mt-2">
+                {errors.discordUsername.message}
+              </p>
             )}
           </div>
           {/* Email */}
