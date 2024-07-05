@@ -6,7 +6,6 @@ export const challenges: Challenge[] = [
     link: "https://github.com/MicroClub-USTHB/Hollow-Dev/blob/main/easy/CrudApi.md",
     difficulty: "easy",
     shadow: "hover:shadow-cyan-950",
-
     image: "/assets/challenge01.png",
     title: "False Knight",
     color: "bg-black",
