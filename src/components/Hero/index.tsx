@@ -1,15 +1,10 @@
 import HollowButton from "../UI/HollowButton";
 import trailer from "/assets/hollow-dev.mp4";
 import "../../styles/trailer.css";
-import { useEffect, useRef } from "react";
+import ReactPlayer from "react-player";
+import { Suspense } from "react";
 const Hero: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      videoRef.current.volume = 0.5;
-    }
-  }, []);
+
   return (
     <div
       id="hero"
@@ -24,20 +19,25 @@ const Hero: React.FC = () => {
           className="w-32 mt-1 mx-auto absolute left-64 transform -translate-x-1/3"
         />
         <div className="bg-transparent text-white flex items-center justify-center text-xl mt-4">
-          <HollowButton title="See Challenges" href="/challenges" />
+          <HollowButton title="REGISTER NOW" href="/registration" />
         </div>
       </div>
 
       <div className="flex justify-center items-center">
-        <video
-          ref={videoRef}
-          autoPlay
-          className="trailer-iframe border border-[#3D3D3D] rounded-md"
-          controls
-        >
-          <source src={trailer} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="flex justify-center items-center">
+          <Suspense fallback={<h1 className="text-white text-xl">Loading...</h1>}>
+            <ReactPlayer
+              url={trailer}
+              playing={true}
+              controls={true}
+              loop={true}
+              volume={0.5}
+              className="trailer-iframe border border-[#3D3D3D] rounded-md"
+              width="100%"
+              height="auto"
+            />
+          </Suspense>
+        </div>
       </div>
     </div>
   );
